@@ -31,7 +31,7 @@ class PackageEntity implements EntityIdInterface
         $this->name = $name;
     }
 
-    public function getGroup()
+    public function getGroup(): GroupEntity
     {
         return $this->group;
     }

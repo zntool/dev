@@ -71,16 +71,20 @@ class GitChangedCommand extends BaseCommand
         /** @var ChangedEntity[] | Collection $totalCollection */
         $output->writeln('<fg=yellow>Has changes:</>');
         $output->writeln('');
+
         foreach ($totalCollection as $changedEntity) {
             $packageEntity = $changedEntity->getPackage();
             $packageId = $packageEntity->getId();
+            $vendorDir = __DIR__ . '/../../../../../';
+            $dir = realpath($vendorDir) . '/' . $packageId;
+            $orgDir = realpath($vendorDir) . '/' . $packageEntity->getGroup()->name;
             if($changedEntity->getStatus() == StatusEnum::CHANGED) {
-                $vendorDir = __DIR__ . '/../../../../../';
-                $dir = realpath($vendorDir) . '/' . $packageId;
                 $fastCommand = "cd $dir && git add . && git commit -m upd && git push";
                 $output->writeln("<fg=yellow> {$packageId}</> ($fastCommand)");
             } elseif ($changedEntity->getStatus() == StatusEnum::NOT_FOUND_REPO) {
-                $output->writeln("<fg=magenta> {$packageId}</> (not found repo)");
+                $gitUrl = "git@github.com:{$packageId}.git";
+                $fastCommand = "cd $orgDir && mv {$packageEntity->getName()} {$packageEntity->getName()}_bak && git clone $gitUrl";
+                $output->writeln("<fg=magenta> {$packageId}</> ($fastCommand)");
             }
         }
     }
