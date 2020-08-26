@@ -47,4 +47,11 @@ class PackageEntity implements EntityIdInterface
         return $vendorDir . DIRECTORY_SEPARATOR . $this->getId();
     }
 
+    public function getGitUrl(): string {
+        $provider = $this->getGroup()->provider_name;
+        if($provider == 'github') {
+            $gitUrl = "git@github.com:{$this->getId()}.git";
+        }
+        return $gitUrl;
+    }
 }

@@ -3,12 +3,13 @@
 namespace PhpLab\Dev\Package\Domain\Entities;
 
 use PhpLab\Core\Domain\Interfaces\Entity\EntityIdInterface;
+use PhpLab\Dev\Package\Domain\Enums\StatusEnum;
 
 class ChangedEntity
 {
 
     private $package;
-    private $status;
+    private $status = StatusEnum::OK;
 
     public function getPackage(): PackageEntity
     {

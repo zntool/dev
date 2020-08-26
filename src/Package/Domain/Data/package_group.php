@@ -77,11 +77,11 @@ return [
         'provider_name' => 'github',
         'authors' => [],
     ],
-    [
+    /*[
         'name' => 'zntool',
         'provider_name' => 'github',
         'authors' => [],
-    ],
+    ],*/
     [
         'name' => 'zntpl',
         'provider_name' => 'github',

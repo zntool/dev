@@ -47,21 +47,19 @@ class GitChangedCommand extends BaseCommand
             $output->write(" $packageId ... ");
             $isHasChanges = $this->gitService->isHasChanges($packageEntity);
             $isGit = is_file($packageEntity->getDirectory() . '/.git/config');
+            $changedEntity = new ChangedEntity;
+            $changedEntity->setPackage($packageEntity);
             if( ! $isGit) {
                 $output->writeln("<fg=magenta>Not found git repository</>");
-                $changedEntity = new ChangedEntity;
-                $changedEntity->setPackage($packageEntity);
                 $changedEntity->setStatus(StatusEnum::NOT_FOUND_REPO);
-                $totalCollection->add($changedEntity);
             } elseif ($isHasChanges) {
                 $output->writeln("<fg=yellow>Has changes</>");
-                $changedEntity = new ChangedEntity;
-                $changedEntity->setPackage($packageEntity);
                 $changedEntity->setStatus(StatusEnum::CHANGED);
-                $totalCollection->add($changedEntity);
             } else {
                 $output->writeln("<fg=green>OK</>");
+                $changedEntity->setStatus(StatusEnum::OK);
             }
+            $totalCollection->add($changedEntity);
         }
         return $totalCollection;
     }
@@ -82,8 +80,9 @@ class GitChangedCommand extends BaseCommand
                 $fastCommand = "cd $dir && git add . && git commit -m upd && git push";
                 $output->writeln("<fg=yellow> {$packageId}</> ($fastCommand)");
             } elseif ($changedEntity->getStatus() == StatusEnum::NOT_FOUND_REPO) {
-                $gitUrl = "git@github.com:{$packageId}.git";
-                $fastCommand = "cd $orgDir && mv {$packageEntity->getName()} {$packageEntity->getName()}_bak && git clone $gitUrl";
+                $packageName = $packageEntity->getName();
+                $gitUrl = $packageEntity->getGitUrl();
+                $fastCommand = "cd $orgDir && mkdir -p bak && mv -f {$packageName} bak/{$packageName} && git clone $gitUrl && cp -rp bak/{$packageName}/* {$packageName}/";
                 $output->writeln("<fg=magenta> {$packageId}</> ($fastCommand)");
             }
         }
