@@ -32,7 +32,9 @@ class GitChangedCommand extends BaseCommand
             $output->writeln('');
             return 0;
         }
-        $this->displayTotal($totalCollection, $input, $output);
+        if($totalCollection->count()) {
+            $this->displayTotal($totalCollection, $input, $output);
+        }
         $output->writeln('');
         return 0;
     }
