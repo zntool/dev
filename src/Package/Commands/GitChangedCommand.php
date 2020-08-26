@@ -54,14 +54,15 @@ class GitChangedCommand extends BaseCommand
             if( ! $isGit) {
                 $output->writeln("<fg=magenta>Not found git repository</>");
                 $changedEntity->setStatus(StatusEnum::NOT_FOUND_REPO);
+                $totalCollection->add($changedEntity);
             } elseif ($isHasChanges) {
                 $output->writeln("<fg=yellow>Has changes</>");
                 $changedEntity->setStatus(StatusEnum::CHANGED);
+                $totalCollection->add($changedEntity);
             } else {
                 $output->writeln("<fg=green>OK</>");
-                $changedEntity->setStatus(StatusEnum::OK);
+                //$changedEntity->setStatus(StatusEnum::OK);
             }
-            $totalCollection->add($changedEntity);
         }
         return $totalCollection;
     }
