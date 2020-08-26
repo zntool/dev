@@ -2,6 +2,32 @@
 
 return [
     [
+        'name' => 'znbundle',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
+        'name' => 'zncore',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
+        'name' => 'zncrypt',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
+        'name' => 'zntool',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
+        'name' => 'znlib',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+
+    [
         'name' => 'php7lab',
         'provider_name' => 'github',
         'authors' => [],

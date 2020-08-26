@@ -25,6 +25,6 @@ $collection = [
     ],
 ];
 
-$baseCollection = require_once(__DIR__ . '/../../vendor/php7lab/dev/src/Package/Domain/Data/package_group.php');
+$baseCollection = require_once(__DIR__ . '/../../vendor/zntool/dev/src/Package/Domain/Data/package_group.php');
 return array_merge($baseCollection, $collection);
 ```

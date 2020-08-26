@@ -1,3 +1,3 @@
 # Установка
 
-    composer require php7lab/dev
+    composer require zntool/dev

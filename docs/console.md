@@ -4,7 +4,7 @@
 
 Переходим в папку `bin`:
 
-    cd vendor/php7lab/dev/bin
+    cd vendor/zntool/dev/bin
 
 Незакомиченные изменения пакетов composer:
 
@@ -22,7 +22,7 @@
 
 Переходим в папку `bin`:
 
-    cd vendor/php7lab/dev/bin
+    cd vendor/zntool/dev/bin
 
 Генерация домена (service, repository, entity, migration, interface):
 

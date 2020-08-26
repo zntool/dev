@@ -3,7 +3,10 @@
 namespace PhpLab\Dev\Package\Commands;
 
 use Illuminate\Support\Collection;
+use PhpLab\Core\Domain\Helpers\EntityHelper;
+use PhpLab\Dev\Package\Domain\Entities\ChangedEntity;
 use PhpLab\Dev\Package\Domain\Entities\PackageEntity;
+use PhpLab\Dev\Package\Domain\Enums\StatusEnum;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -46,9 +49,16 @@ class GitChangedCommand extends BaseCommand
             $isGit = is_file($packageEntity->getDirectory() . '/.git/config');
             if( ! $isGit) {
                 $output->writeln("<fg=magenta>Not found git repository</>");
+                $changedEntity = new ChangedEntity;
+                $changedEntity->setPackage($packageEntity);
+                $changedEntity->setStatus(StatusEnum::NOT_FOUND_REPO);
+                $totalCollection->add($changedEntity);
             } elseif ($isHasChanges) {
                 $output->writeln("<fg=yellow>Has changes</>");
-                $totalCollection->add($packageEntity);
+                $changedEntity = new ChangedEntity;
+                $changedEntity->setPackage($packageEntity);
+                $changedEntity->setStatus(StatusEnum::CHANGED);
+                $totalCollection->add($changedEntity);
             } else {
                 $output->writeln("<fg=green>OK</>");
             }
@@ -58,12 +68,20 @@ class GitChangedCommand extends BaseCommand
 
     private function displayTotal(Collection $totalCollection, InputInterface $input, OutputInterface $output)
     {
-        /** @var PackageEntity[] | Collection $totalCollection */
+        /** @var ChangedEntity[] | Collection $totalCollection */
         $output->writeln('<fg=yellow>Has changes:</>');
         $output->writeln('');
-        foreach ($totalCollection as $packageEntity) {
+        foreach ($totalCollection as $changedEntity) {
+            $packageEntity = $changedEntity->getPackage();
             $packageId = $packageEntity->getId();
-            $output->writeln("<fg=yellow> {$packageId}</>");
+            if($changedEntity->getStatus() == StatusEnum::CHANGED) {
+                $vendorDir = __DIR__ . '/../../../../../';
+                $dir = realpath($vendorDir) . '/' . $packageId;
+                $fastCommand = "cd $dir && git add . && git commit -m upd && git push";
+                $output->writeln("<fg=yellow> {$packageId}</> ($fastCommand)");
+            } elseif ($changedEntity->getStatus() == StatusEnum::NOT_FOUND_REPO) {
+                $output->writeln("<fg=magenta> {$packageId}</> (not found repo)");
+            }
         }
     }
 }
