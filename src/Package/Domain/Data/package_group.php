@@ -33,6 +33,11 @@ return [
         'authors' => [],
     ],
     [
+        'name' => 'znfork',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
         'name' => 'znlab',
         'provider_name' => 'github',
         'authors' => [],
