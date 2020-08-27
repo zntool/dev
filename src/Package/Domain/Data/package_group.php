@@ -53,6 +53,11 @@ return [
         'authors' => [],
     ],
     [
+        'name' => 'znfixture',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
         'name' => 'zntool',
         'provider_name' => 'github',
         'authors' => [],
