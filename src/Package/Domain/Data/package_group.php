@@ -18,32 +18,7 @@ return [
         'authors' => [],
     ],
     [
-        'name' => 'zndev',
-        'provider_name' => 'github',
-        'authors' => [],
-    ],
-    [
         'name' => 'zndoc',
-        'provider_name' => 'github',
-        'authors' => [],
-    ],
-    [
-        'name' => 'znlib',
-        'provider_name' => 'github',
-        'authors' => [],
-    ],
-    [
-        'name' => 'znlab',
-        'provider_name' => 'github',
-        'authors' => [],
-    ],
-    [
-        'name' => 'znsandbox',
-        'provider_name' => 'github',
-        'authors' => [],
-    ],
-    [
-        'name' => 'zntpl',
         'provider_name' => 'github',
         'authors' => [],
     ],
@@ -58,7 +33,27 @@ return [
         'authors' => [],
     ],
     [
+        'name' => 'znlab',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
+        'name' => 'znlib',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
+        'name' => 'znsandbox',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
         'name' => 'zntool',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
+        'name' => 'zntpl',
         'provider_name' => 'github',
         'authors' => [],
     ],
