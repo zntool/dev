@@ -6,7 +6,7 @@ class GroupEntity
 {
 
     public $name;
-    public $provider_name;
+    public $providerName;
     public $url;
     public $authors;
     public $provider;

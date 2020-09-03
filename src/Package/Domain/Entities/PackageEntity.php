@@ -48,7 +48,7 @@ class PackageEntity implements EntityIdInterface
     }
 
     public function getGitUrl(): string {
-        $provider = $this->getGroup()->provider_name;
+        $provider = $this->getGroup()->providerName;
         if($provider == 'github') {
             $gitUrl = "git@github.com:{$this->getId()}.git";
         }
