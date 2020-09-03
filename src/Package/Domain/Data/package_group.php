@@ -1,6 +1,7 @@
 <?php
 
 return [
+
     [
         'name' => 'znbundle',
         'provider_name' => 'github',
@@ -17,12 +18,47 @@ return [
         'authors' => [],
     ],
     [
-        'name' => 'zntool',
+        'name' => 'zndoc',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
+        'name' => 'znexample',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
+        'name' => 'znfixture',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
+        'name' => 'znfork',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
+        'name' => 'znlab',
         'provider_name' => 'github',
         'authors' => [],
     ],
     [
         'name' => 'znlib',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
+        'name' => 'znsandbox',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
+        'name' => 'zntool',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
+        'name' => 'zntpl',
         'provider_name' => 'github',
         'authors' => [],
     ],
@@ -54,36 +90,6 @@ return [
     ],
     [
         'name' => 'php7tool',
-        'provider_name' => 'github',
-        'authors' => [],
-    ],
-    [
-        'name' => 'zndoc',
-        'provider_name' => 'github',
-        'authors' => [],
-    ],
-    [
-        'name' => 'zndev',
-        'provider_name' => 'github',
-        'authors' => [],
-    ],
-    [
-        'name' => 'znlab',
-        'provider_name' => 'github',
-        'authors' => [],
-    ],
-    [
-        'name' => 'znsandbox',
-        'provider_name' => 'github',
-        'authors' => [],
-    ],
-    /*[
-        'name' => 'zntool',
-        'provider_name' => 'github',
-        'authors' => [],
-    ],*/
-    [
-        'name' => 'zntpl',
         'provider_name' => 'github',
         'authors' => [],
     ],
