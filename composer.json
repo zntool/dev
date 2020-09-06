@@ -12,9 +12,7 @@
   "require": {
     "symfony/var-dumper": "4.*",
     "symfony/yaml": "4.*",
-    "guzzlehttp/guzzle": ">5.3"
-  },
-  "require-dev": {
+    "guzzlehttp/guzzle": ">5.3",
     "zendframework/zend-code": "^3.3.0"
   },
   "autoload": {
