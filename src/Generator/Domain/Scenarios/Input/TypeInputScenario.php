@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Scenarios\Input;
+namespace ZnTool\Dev\Generator\Domain\Scenarios\Input;
 
-use PhpLab\Core\Console\Question\ChoiceQuestion;
+use ZnCore\Base\Console\Question\ChoiceQuestion;
 use Symfony\Component\Console\Question\Question;
 
 class TypeInputScenario extends BaseInputScenario

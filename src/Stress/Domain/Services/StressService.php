@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpLab\Dev\Stress\Domain\Services;
+namespace ZnTool\Dev\Stress\Domain\Services;
 
 use GuzzleHttp\Client;
 use Illuminate\Support\Collection;
-use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
-use PhpLab\Core\Libs\Benchmark;
-use PhpLab\Dev\Stress\Domain\Entities\ResultEntity;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Base\Libs\Benchmark;
+use ZnTool\Dev\Stress\Domain\Entities\ResultEntity;
 use function GuzzleHttp\Promise\settle;
 
 class StressService

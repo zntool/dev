@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain;
+namespace ZnTool\Dev\Package\Domain;
 
-use PhpLab\Core\Domain\Interfaces\DomainInterface;
+use ZnCore\Base\Domain\Interfaces\DomainInterface;
 
 class Domain implements DomainInterface
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Interfaces\Repositories;
+namespace ZnTool\Dev\Package\Domain\Interfaces\Repositories;
 
 use Illuminate\Support\Collection;
-use PhpLab\Core\Domain\Interfaces\GetEntityClassInterface;
-use PhpLab\Dev\Package\Domain\Entities\PackageEntity;
+use ZnCore\Base\Domain\Interfaces\GetEntityClassInterface;
+use ZnTool\Dev\Package\Domain\Entities\PackageEntity;
 
 interface GitRepositoryInterface extends GetEntityClassInterface
 {

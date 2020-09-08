@@ -1,16 +1,16 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Scenarios\Generate;
+namespace ZnTool\Dev\Generator\Domain\Scenarios\Generate;
 
-use PhpLab\Core\Legacy\Code\entities\ClassEntity;
-use PhpLab\Core\Legacy\Code\entities\ClassUseEntity;
-use PhpLab\Core\Legacy\Code\entities\ClassVariableEntity;
-use PhpLab\Core\Legacy\Code\entities\InterfaceEntity;
-use PhpLab\Core\Legacy\Code\enums\AccessEnum;
-use PhpLab\Core\Legacy\Code\helpers\ClassHelper;
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
-use PhpLab\Dev\Generator\Domain\Helpers\TemplateCodeHelper;
-use PhpLab\Dev\Package\Domain\Helpers\PackageHelper;
+use ZnCore\Base\Legacy\Code\entities\ClassEntity;
+use ZnCore\Base\Legacy\Code\entities\ClassUseEntity;
+use ZnCore\Base\Legacy\Code\entities\ClassVariableEntity;
+use ZnCore\Base\Legacy\Code\entities\InterfaceEntity;
+use ZnCore\Base\Legacy\Code\enums\AccessEnum;
+use ZnCore\Base\Legacy\Code\helpers\ClassHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
+use ZnTool\Dev\Generator\Domain\Helpers\TemplateCodeHelper;
+use ZnTool\Dev\Package\Domain\Helpers\PackageHelper;
 use Zend\Code\Generator\ClassGenerator;
 use Zend\Code\Generator\FileGenerator;
 use Zend\Code\Generator\MethodGenerator;
@@ -43,7 +43,7 @@ class ApiScenario extends BaseScenario
         }
 
         if ($this->buildDto->isCrudController) {
-            $fileGenerator->setUse('PhpLab\Rest\Base\BaseCrudApiController');
+            $fileGenerator->setUse('ZnLib\Rest\Base\BaseCrudApiController');
             $classGenerator->setExtendedClass('BaseCrudApiController');
         } else {
             $fileGenerator->setUse('Symfony\Bundle\FrameworkBundle\Controller\AbstractController');
@@ -54,7 +54,7 @@ class ApiScenario extends BaseScenario
         ]);
 
         $fileGenerator->setUse('Symfony\Bundle\FrameworkBundle\Controller\AbstractController');
-        $fileGenerator->setUse('PhpLab\Web\Traits\AccessTrait');
+        $fileGenerator->setUse('ZnSandbox\Web\Traits\AccessTrait');
 
         $classGenerator->setExtendedClass('AbstractController');
         $classGenerator->addTrait('AccessTrait');

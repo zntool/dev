@@ -1,17 +1,17 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Libs;
+namespace ZnTool\Dev\Package\Domain\Libs;
 
-use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
-use PhpLab\Core\Libs\Store\StoreFile;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Base\Libs\Store\StoreFile;
 use yii2rails\domain\enums\RelationEnum;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
-use PhpLab\Dev\Package\Domain\Entities\ConfigEntity;
-use PhpLab\Dev\Package\Domain\Helpers\ComposerConfigHelper;
-use PhpLab\Dev\Composer\Domain\Interfaces\Services\ConfigServiceInterface;
-use PhpLab\Dev\Package\Domain\Interfaces\Services\GitServiceInterface;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
+use ZnTool\Dev\Package\Domain\Entities\ConfigEntity;
+use ZnTool\Dev\Package\Domain\Helpers\ComposerConfigHelper;
+use ZnTool\Dev\Composer\Domain\Interfaces\Services\ConfigServiceInterface;
+use ZnTool\Dev\Package\Domain\Interfaces\Services\GitServiceInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

@@ -1,19 +1,19 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Scenarios\Generate;
+namespace ZnTool\Dev\Generator\Domain\Scenarios\Generate;
 
-use PhpLab\Core\Domain\Interfaces\Service\CrudServiceInterface;
-use PhpLab\Core\Legacy\Code\entities\ClassEntity;
-use PhpLab\Core\Legacy\Code\entities\ClassUseEntity;
-use PhpLab\Core\Legacy\Code\entities\ClassVariableEntity;
-use PhpLab\Core\Legacy\Code\entities\DocBlockEntity;
-use PhpLab\Core\Legacy\Code\entities\DocBlockParameterEntity;
-use PhpLab\Core\Legacy\Code\entities\InterfaceEntity;
-use PhpLab\Core\Legacy\Code\enums\AccessEnum;
-use PhpLab\Core\Legacy\Code\helpers\ClassHelper;
-use PhpLab\Core\Legacy\Yii\Helpers\Inflector;
-use PhpLab\Dev\Generator\Domain\Enums\TypeEnum;
-use PhpLab\Dev\Generator\Domain\Helpers\LocationHelper;
+use ZnCore\Base\Domain\Interfaces\Service\CrudServiceInterface;
+use ZnCore\Base\Legacy\Code\entities\ClassEntity;
+use ZnCore\Base\Legacy\Code\entities\ClassUseEntity;
+use ZnCore\Base\Legacy\Code\entities\ClassVariableEntity;
+use ZnCore\Base\Legacy\Code\entities\DocBlockEntity;
+use ZnCore\Base\Legacy\Code\entities\DocBlockParameterEntity;
+use ZnCore\Base\Legacy\Code\entities\InterfaceEntity;
+use ZnCore\Base\Legacy\Code\enums\AccessEnum;
+use ZnCore\Base\Legacy\Code\helpers\ClassHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\Inflector;
+use ZnTool\Dev\Generator\Domain\Enums\TypeEnum;
+use ZnTool\Dev\Generator\Domain\Helpers\LocationHelper;
 use Zend\Code\Generator\ClassGenerator;
 use Zend\Code\Generator\FileGenerator;
 use Zend\Code\Generator\InterfaceGenerator;
@@ -57,7 +57,7 @@ class ServiceScenario extends BaseScenario
         $interfaceEntity = new InterfaceEntity;
         $interfaceEntity->name = $this->getInterfaceFullName($className);
         if($this->buildDto->isCrudService) {
-            $uses[] = new ClassUseEntity(['name' => 'PhpLab\Core\Domain\Interfaces\Service\CrudServiceInterface']);
+            $uses[] = new ClassUseEntity(['name' => 'ZnCore\Base\Domain\Interfaces\Service\CrudServiceInterface']);
             $interfaceEntity->extends = 'CrudServiceInterface';
         }
         ClassHelper::generate($interfaceEntity, $uses);
@@ -94,10 +94,10 @@ class ServiceScenario extends BaseScenario
 
 
         if ($this->buildDto->isCrudService) {
-            $fileGenerator->setUse('PhpLab\Core\Domain\Base\BaseCrudService');
+            $fileGenerator->setUse('ZnCore\Base\Domain\Base\BaseCrudService');
             $classGenerator->setExtendedClass('BaseCrudService');
         } else {
-            $fileGenerator->setUse('PhpLab\Core\Domain\Base\BaseService');
+            $fileGenerator->setUse('ZnCore\Base\Domain\Base\BaseService');
             $classGenerator->setExtendedClass('BaseService');
         }
 
@@ -141,10 +141,10 @@ class ServiceScenario extends BaseScenario
         $uses[] = new ClassUseEntity(['name' => $repositoryInterfaceFullClassName]);
 
         if($this->buildDto->isCrudService) {
-            $uses[] = new ClassUseEntity(['name' => 'PhpLab\Core\Domain\Base\BaseCrudService']);
+            $uses[] = new ClassUseEntity(['name' => 'ZnCore\Base\Domain\Base\BaseCrudService']);
             $classEntity->extends = 'BaseCrudService';
         } else {
-            $uses[] = new ClassUseEntity(['name' => 'PhpLab\Core\Domain\Base\BaseService']);
+            $uses[] = new ClassUseEntity(['name' => 'ZnCore\Base\Domain\Base\BaseService']);
             $classEntity->extends = 'BaseService';
         }
 

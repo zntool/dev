@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Dev\Composer\Domain\Interfaces\Services;
+namespace ZnTool\Dev\Composer\Domain\Interfaces\Services;
 
-use PhpLab\Core\Domain\Interfaces\Service\CrudServiceInterface;
+use ZnCore\Base\Domain\Interfaces\Service\CrudServiceInterface;
 
 interface ConfigServiceInterface extends CrudServiceInterface
 {

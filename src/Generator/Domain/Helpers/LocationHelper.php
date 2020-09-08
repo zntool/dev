@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Helpers;
+namespace ZnTool\Dev\Generator\Domain\Helpers;
 
-use PhpLab\Core\Legacy\Yii\Helpers\Inflector;
-use PhpLab\Dev\Generator\Domain\Enums\TypeEnum;
+use ZnCore\Base\Legacy\Yii\Helpers\Inflector;
+use ZnTool\Dev\Generator\Domain\Enums\TypeEnum;
 
 class LocationHelper
 {

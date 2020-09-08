@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Commands;
+namespace ZnTool\Dev\Generator\Commands;
 
-use PhpLab\Dev\Generator\Domain\Dto\BuildDto;
-use PhpLab\Dev\Generator\Domain\Scenarios\Input\BaseInputScenario;
+use ZnTool\Dev\Generator\Domain\Dto\BuildDto;
+use ZnTool\Dev\Generator\Domain\Scenarios\Input\BaseInputScenario;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

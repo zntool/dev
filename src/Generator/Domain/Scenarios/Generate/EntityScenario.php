@@ -1,15 +1,15 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Scenarios\Generate;
+namespace ZnTool\Dev\Generator\Domain\Scenarios\Generate;
 
-use PhpLab\Core\Legacy\Code\entities\ClassEntity;
-use PhpLab\Core\Legacy\Code\entities\ClassUseEntity;
-use PhpLab\Core\Legacy\Code\entities\ClassVariableEntity;
-use PhpLab\Core\Legacy\Code\entities\InterfaceEntity;
-use PhpLab\Core\Legacy\Code\enums\AccessEnum;
-use PhpLab\Core\Legacy\Code\helpers\ClassHelper;
-use PhpLab\Core\Legacy\Yii\Helpers\Inflector;
-use PhpLab\Dev\Generator\Domain\Dto\BuildDto;
+use ZnCore\Base\Legacy\Code\entities\ClassEntity;
+use ZnCore\Base\Legacy\Code\entities\ClassUseEntity;
+use ZnCore\Base\Legacy\Code\entities\ClassVariableEntity;
+use ZnCore\Base\Legacy\Code\entities\InterfaceEntity;
+use ZnCore\Base\Legacy\Code\enums\AccessEnum;
+use ZnCore\Base\Legacy\Code\helpers\ClassHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\Inflector;
+use ZnTool\Dev\Generator\Domain\Dto\BuildDto;
 use Zend\Code\Generator\ClassGenerator;
 use Zend\Code\Generator\FileGenerator;
 use Zend\Code\Generator\InterfaceGenerator;
@@ -45,11 +45,11 @@ class EntityScenario extends BaseScenario
 
         $implementedInterfaces = [];
         $fileGenerator->setUse('Symfony\Component\Validator\Constraints', 'Assert');
-        $fileGenerator->setUse('PhpLab\Core\Domain\Interfaces\Entity\ValidateEntityInterface');
+        $fileGenerator->setUse('ZnCore\Base\Domain\Interfaces\Entity\ValidateEntityInterface');
         $implementedInterfaces[] = 'ValidateEntityInterface';
 
         if(in_array('id', $this->attributes)) {
-            $fileGenerator->setUse('PhpLab\Core\Domain\Interfaces\Entity\EntityIdInterface');
+            $fileGenerator->setUse('ZnCore\Base\Domain\Interfaces\Entity\EntityIdInterface');
             $implementedInterfaces[] = 'EntityIdInterface';
         }
 

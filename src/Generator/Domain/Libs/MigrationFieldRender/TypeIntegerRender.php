@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Libs\MigrationFieldRender;
+namespace ZnTool\Dev\Generator\Domain\Libs\MigrationFieldRender;
 
-use PhpLab\Dev\Generator\Domain\Helpers\FieldRenderHelper;
+use ZnTool\Dev\Generator\Domain\Helpers\FieldRenderHelper;
 
 class TypeIntegerRender extends BaseRender
 {

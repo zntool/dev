@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Scenarios\Input;
+namespace ZnTool\Dev\Generator\Domain\Scenarios\Input;
 
 use Symfony\Component\Console\Question\ConfirmationQuestion;
 use Symfony\Component\Console\Question\Question;

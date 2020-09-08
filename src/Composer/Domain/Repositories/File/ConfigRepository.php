@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpLab\Dev\Composer\Domain\Repositories\File;
+namespace ZnTool\Dev\Composer\Domain\Repositories\File;
 
-use PhpLab\Dev\Package\Domain\Entities\ConfigEntity;
-use PhpLab\Dev\Composer\Domain\Interfaces\Repositories\ConfigRepositoryInterface;
+use ZnTool\Dev\Package\Domain\Entities\ConfigEntity;
+use ZnTool\Dev\Composer\Domain\Interfaces\Repositories\ConfigRepositoryInterface;
 
 class ConfigRepository implements ConfigRepositoryInterface
 {

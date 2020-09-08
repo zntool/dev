@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Dev\Stress\Domain\Entities;
+namespace ZnTool\Dev\Stress\Domain\Entities;
 
 class ResultEntity
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Dto;
+namespace ZnTool\Dev\Generator\Domain\Dto;
 
 class RoutesConfigDto
 {

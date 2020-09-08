@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpLab\Dev\Phar\Commands;
+namespace ZnTool\Dev\Phar\Commands;
 
 use Illuminate\Container\Container;
-use PhpLab\Core\Console\Widgets\LogWidget;
-use PhpLab\Core\Console\Widgets\TextWidget;
-use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Base\Console\Widgets\LogWidget;
+use ZnCore\Base\Console\Widgets\TextWidget;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Libs;
+namespace ZnTool\Dev\Package\Domain\Libs;
 
-use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
-use PhpLab\Core\Libs\Shell\BaseShell;
-use PhpLab\Core\Libs\Shell\ShellException;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
+use ZnCore\Base\Libs\Shell\BaseShell;
+use ZnCore\Base\Libs\Shell\ShellException;
 
 class GitShell extends BaseShell
 {

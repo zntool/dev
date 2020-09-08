@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Dev\Composer\Domain\Interfaces\Repositories;
+namespace ZnTool\Dev\Composer\Domain\Interfaces\Repositories;
 
-use PhpLab\Core\Domain\Interfaces\Repository\CrudRepositoryInterface;
+use ZnCore\Base\Domain\Interfaces\Repository\CrudRepositoryInterface;
 
 interface ConfigRepositoryInterface /*extends CrudRepositoryInterface*/
 {

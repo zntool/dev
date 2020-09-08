@@ -1,19 +1,19 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Scenarios\Generate;
+namespace ZnTool\Dev\Generator\Domain\Scenarios\Generate;
 
-use PhpLab\Core\Domain\Interfaces\Repository\CrudRepositoryInterface;
-use PhpLab\Core\Domain\Interfaces\Repository\RepositoryInterface;
-use PhpLab\Core\Legacy\Code\entities\ClassEntity;
-use PhpLab\Core\Legacy\Code\entities\ClassUseEntity;
-use PhpLab\Core\Legacy\Code\entities\ClassVariableEntity;
-use PhpLab\Core\Legacy\Code\entities\InterfaceEntity;
-use PhpLab\Core\Legacy\Code\helpers\ClassHelper;
-use PhpLab\Core\Legacy\Yii\Helpers\Inflector;
-use PhpLab\Dev\Generator\Domain\Enums\TypeEnum;
-use PhpLab\Dev\Generator\Domain\Helpers\LocationHelper;
-use PhpLab\Eloquent\Db\Base\BaseEloquentCrudRepository;
-use PhpLab\Eloquent\Db\Base\BaseEloquentRepository;
+use ZnCore\Base\Domain\Interfaces\Repository\CrudRepositoryInterface;
+use ZnCore\Base\Domain\Interfaces\Repository\RepositoryInterface;
+use ZnCore\Base\Legacy\Code\entities\ClassEntity;
+use ZnCore\Base\Legacy\Code\entities\ClassUseEntity;
+use ZnCore\Base\Legacy\Code\entities\ClassVariableEntity;
+use ZnCore\Base\Legacy\Code\entities\InterfaceEntity;
+use ZnCore\Base\Legacy\Code\helpers\ClassHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\Inflector;
+use ZnTool\Dev\Generator\Domain\Enums\TypeEnum;
+use ZnTool\Dev\Generator\Domain\Helpers\LocationHelper;
+use ZnCore\Db\Db\Base\BaseEloquentCrudRepository;
+use ZnCore\Db\Db\Base\BaseEloquentRepository;
 use Zend\Code\Generator\ClassGenerator;
 use Zend\Code\Generator\FileGenerator;
 use Zend\Code\Generator\InterfaceGenerator;
@@ -130,7 +130,7 @@ class RepositoryScenario extends BaseScenario
                 $className = BaseEloquentRepository::class;
             }
         } else {
-            //$className = 'PhpLab\Core\Domain\Base\BaseRepository';
+            //$className = 'ZnCore\Base\Domain\Base\BaseRepository';
         }
         return $className;
     }

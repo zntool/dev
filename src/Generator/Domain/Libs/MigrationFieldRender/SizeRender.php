@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Libs\MigrationFieldRender;
+namespace ZnTool\Dev\Generator\Domain\Libs\MigrationFieldRender;
 
 class SizeRender extends BaseRender
 {

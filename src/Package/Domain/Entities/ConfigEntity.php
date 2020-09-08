@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Entities;
+namespace ZnTool\Dev\Package\Domain\Entities;
 
-use PhpLab\Core\Domain\Interfaces\Entity\EntityIdInterface;
-use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Base\Domain\Interfaces\Entity\EntityIdInterface;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use Symfony\Component\Validator\Constraints as Assert;
-use PhpLab\Core\Domain\Interfaces\Entity\ValidateEntityInterface;
+use ZnCore\Base\Domain\Interfaces\Entity\ValidateEntityInterface;
 
 class ConfigEntity implements ValidateEntityInterface, EntityIdInterface
 {

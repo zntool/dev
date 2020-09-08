@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Helpers;
+namespace ZnTool\Dev\Package\Domain\Helpers;
 
 class VendorHelper
 {

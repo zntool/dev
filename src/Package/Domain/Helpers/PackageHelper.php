@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Helpers;
+namespace ZnTool\Dev\Package\Domain\Helpers;
 
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
 
 class PackageHelper
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Interfaces\Services;
+namespace ZnTool\Dev\Package\Domain\Interfaces\Services;
 
 use Illuminate\Support\Collection;
-use PhpLab\Dev\Package\Domain\Entities\PackageEntity;
+use ZnTool\Dev\Package\Domain\Entities\PackageEntity;
 
 interface GitServiceInterface
 {

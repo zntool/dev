@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpLab\Dev\Stress\Commands;
+namespace ZnTool\Dev\Stress\Commands;
 
 use Illuminate\Support\Collection;
-use PhpLab\Dev\Stress\Domain\Entities\TestEntity;
-use PhpLab\Dev\Stress\Domain\Services\StressService;
+use ZnTool\Dev\Stress\Domain\Entities\TestEntity;
+use ZnTool\Dev\Stress\Domain\Services\StressService;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

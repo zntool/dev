@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpLab\Dev\Package\Commands;
+namespace ZnTool\Dev\Package\Commands;
 
 use Illuminate\Support\Collection;
-use PhpLab\Core\Domain\Helpers\EntityHelper;
-use PhpLab\Dev\Package\Domain\Entities\ChangedEntity;
-use PhpLab\Dev\Package\Domain\Entities\PackageEntity;
-use PhpLab\Dev\Package\Domain\Enums\StatusEnum;
+use ZnCore\Base\Domain\Helpers\EntityHelper;
+use ZnTool\Dev\Package\Domain\Entities\ChangedEntity;
+use ZnTool\Dev\Package\Domain\Entities\PackageEntity;
+use ZnTool\Dev\Package\Domain\Enums\StatusEnum;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 

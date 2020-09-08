@@ -1,17 +1,17 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Commands;
+namespace ZnTool\Dev\Generator\Commands;
 
-use PhpLab\Dev\Generator\Domain\Dto\BuildDto;
-use PhpLab\Dev\Generator\Domain\Interfaces\Services\DomainServiceInterface;
-use PhpLab\Dev\Generator\Domain\Scenarios\Input\DomainNameInputScenario;
-use PhpLab\Dev\Generator\Domain\Scenarios\Input\DomainNamespaceInputScenario;
-use PhpLab\Dev\Generator\Domain\Scenarios\Input\DriverInputScenario;
-use PhpLab\Dev\Generator\Domain\Scenarios\Input\EntityAttributesInputScenario;
-use PhpLab\Dev\Generator\Domain\Scenarios\Input\IsCrudRepositoryInputScenario;
-use PhpLab\Dev\Generator\Domain\Scenarios\Input\IsCrudServiceInputScenario;
-use PhpLab\Dev\Generator\Domain\Scenarios\Input\NameInputScenario;
-use PhpLab\Dev\Generator\Domain\Scenarios\Input\TypeInputScenario;
+use ZnTool\Dev\Generator\Domain\Dto\BuildDto;
+use ZnTool\Dev\Generator\Domain\Interfaces\Services\DomainServiceInterface;
+use ZnTool\Dev\Generator\Domain\Scenarios\Input\DomainNameInputScenario;
+use ZnTool\Dev\Generator\Domain\Scenarios\Input\DomainNamespaceInputScenario;
+use ZnTool\Dev\Generator\Domain\Scenarios\Input\DriverInputScenario;
+use ZnTool\Dev\Generator\Domain\Scenarios\Input\EntityAttributesInputScenario;
+use ZnTool\Dev\Generator\Domain\Scenarios\Input\IsCrudRepositoryInputScenario;
+use ZnTool\Dev\Generator\Domain\Scenarios\Input\IsCrudServiceInputScenario;
+use ZnTool\Dev\Generator\Domain\Scenarios\Input\NameInputScenario;
+use ZnTool\Dev\Generator\Domain\Scenarios\Input\TypeInputScenario;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 

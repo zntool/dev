@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpLab\Dev\Runtime\Domain\Helpers;
+namespace ZnTool\Dev\Runtime\Domain\Helpers;
 
 use Faker\Provider\File;
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
 
 class UsedHelper
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Services;
+namespace ZnTool\Dev\Generator\Domain\Services;
 
-use PhpLab\Core\Legacy\Yii\Helpers\Inflector;
-use PhpLab\Core\Helpers\ClassHelper;
-use PhpLab\Dev\Generator\Domain\Dto\BuildDto;
-use PhpLab\Dev\Generator\Domain\Interfaces\Services\DomainServiceInterface;
-use PhpLab\Dev\Generator\Domain\Scenarios\Generate\BaseScenario;
+use ZnCore\Base\Legacy\Yii\Helpers\Inflector;
+use ZnCore\Base\Helpers\ClassHelper;
+use ZnTool\Dev\Generator\Domain\Dto\BuildDto;
+use ZnTool\Dev\Generator\Domain\Interfaces\Services\DomainServiceInterface;
+use ZnTool\Dev\Generator\Domain\Scenarios\Generate\BaseScenario;
 
 class DomainService implements DomainServiceInterface
 {
@@ -31,7 +31,7 @@ class DomainService implements DomainServiceInterface
 
     private function createScenarioByTypeName($type): BaseScenario
     {
-        $scenarioClass = 'PhpLab\\Dev\\Generator\\Domain\Scenarios\\Generate\\' . $type . 'Scenario';
+        $scenarioClass = 'ZnTool\\Dev\\Generator\\Domain\Scenarios\\Generate\\' . $type . 'Scenario';
         /** @var BaseScenario $scenarioInstance */
         $scenarioInstance = new $scenarioClass;
         return $scenarioInstance;

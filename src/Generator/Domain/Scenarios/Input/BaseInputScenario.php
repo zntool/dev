@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Scenarios\Input;
+namespace ZnTool\Dev\Generator\Domain\Scenarios\Input;
 
-use PhpLab\Dev\Generator\Domain\Dto\BuildDto;
+use ZnTool\Dev\Generator\Domain\Dto\BuildDto;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;

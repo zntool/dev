@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpLab\Dev\Phar\Domain\Helpers;
+namespace ZnTool\Dev\Phar\Domain\Helpers;
 
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
-use PhpLab\Core\Libs\Store\StoreFile;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
+use ZnCore\Base\Libs\Store\StoreFile;
 
 class PharHelper
 {

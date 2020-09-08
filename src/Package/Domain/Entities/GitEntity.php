@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Entities;
+namespace ZnTool\Dev\Package\Domain\Entities;
 
-use PhpLab\Core\Domain\Interfaces\Entity\EntityIdInterface;
+use ZnCore\Base\Domain\Interfaces\Entity\EntityIdInterface;
 
 class GitEntity implements EntityIdInterface
 {

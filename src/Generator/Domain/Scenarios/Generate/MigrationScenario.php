@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Scenarios\Generate;
+namespace ZnTool\Dev\Generator\Domain\Scenarios\Generate;
 
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
-use PhpLab\Dev\Generator\Domain\Helpers\TemplateCodeHelper;
-use PhpLab\Dev\Package\Domain\Helpers\PackageHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
+use ZnTool\Dev\Generator\Domain\Helpers\TemplateCodeHelper;
+use ZnTool\Dev\Package\Domain\Helpers\PackageHelper;
 use Zend\Code\Generator\FileGenerator;
 
 class MigrationScenario extends BaseScenario
@@ -34,7 +34,7 @@ class MigrationScenario extends BaseScenario
 
         $fileGenerator->setNamespace('Migrations');
         $fileGenerator->setUse('Illuminate\Database\Schema\Blueprint');
-        $fileGenerator->setUse('PhpLab\Eloquent\Migration\Base\BaseCreateTableMigration');
+        $fileGenerator->setUse('ZnCore\Db\Migration\Base\BaseCreateTableMigration');
 
         $tableName = $this->buildDto->domainName . '_' . $this->buildDto->name;
         $code = TemplateCodeHelper::generateMigrationClassCode($this->getClassName(), $this->buildDto->attributes, $tableName);

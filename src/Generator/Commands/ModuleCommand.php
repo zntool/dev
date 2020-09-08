@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Commands;
+namespace ZnTool\Dev\Generator\Commands;
 
-use PhpLab\Dev\Generator\Domain\Dto\BuildDto;
-use PhpLab\Dev\Generator\Domain\Interfaces\Services\ModuleServiceInterface;
-use PhpLab\Dev\Generator\Domain\Scenarios\Input\ModuleNamespaceInputScenario;
-use PhpLab\Dev\Generator\Domain\Scenarios\Input\NameInputScenario;
-use PhpLab\Dev\Generator\Domain\Scenarios\Input\TypeModuleInputScenario;
+use ZnTool\Dev\Generator\Domain\Dto\BuildDto;
+use ZnTool\Dev\Generator\Domain\Interfaces\Services\ModuleServiceInterface;
+use ZnTool\Dev\Generator\Domain\Scenarios\Input\ModuleNamespaceInputScenario;
+use ZnTool\Dev\Generator\Domain\Scenarios\Input\NameInputScenario;
+use ZnTool\Dev\Generator\Domain\Scenarios\Input\TypeModuleInputScenario;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 

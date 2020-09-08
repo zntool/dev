@@ -1,15 +1,15 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Repositories\File;
+namespace ZnTool\Dev\Package\Domain\Repositories\File;
 
 use Illuminate\Support\Collection;
-use PhpLab\Core\Domain\Interfaces\Entity\EntityIdInterface;
-use PhpLab\Core\Domain\Libs\Query;
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
-use PhpLab\Core\Libs\Store\StoreFile;
-use PhpLab\Dev\Package\Domain\Entities\GroupEntity;
-use PhpLab\Dev\Package\Domain\Entities\PackageEntity;
-use PhpLab\Dev\Package\Domain\Interfaces\Repositories\PackageRepositoryInterface;
+use ZnCore\Base\Domain\Interfaces\Entity\EntityIdInterface;
+use ZnCore\Base\Domain\Libs\Query;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
+use ZnCore\Base\Libs\Store\StoreFile;
+use ZnTool\Dev\Package\Domain\Entities\GroupEntity;
+use ZnTool\Dev\Package\Domain\Entities\PackageEntity;
+use ZnTool\Dev\Package\Domain\Interfaces\Repositories\PackageRepositoryInterface;
 
 class PackageRepository implements PackageRepositoryInterface
 {

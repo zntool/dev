@@ -1,16 +1,16 @@
 <?php
 
-namespace PhpLab\Dev\Composer\Domain\Services;
+namespace ZnTool\Dev\Composer\Domain\Services;
 
 use Illuminate\Support\Collection;
-use PhpLab\Core\Domain\Base\BaseCrudService;
-use PhpLab\Core\Domain\Libs\Query;
-use PhpLab\Core\Libs\Store\StoreFile;
-use PhpLab\Dev\Package\Domain\Entities\ConfigEntity;
-use PhpLab\Dev\Package\Domain\Entities\PackageEntity;
-use PhpLab\Dev\Composer\Domain\Interfaces\Repositories\ConfigRepositoryInterface;
-use PhpLab\Dev\Package\Domain\Interfaces\Repositories\PackageRepositoryInterface;
-use PhpLab\Dev\Composer\Domain\Interfaces\Services\ConfigServiceInterface;
+use ZnCore\Base\Domain\Base\BaseCrudService;
+use ZnCore\Base\Domain\Libs\Query;
+use ZnCore\Base\Libs\Store\StoreFile;
+use ZnTool\Dev\Package\Domain\Entities\ConfigEntity;
+use ZnTool\Dev\Package\Domain\Entities\PackageEntity;
+use ZnTool\Dev\Composer\Domain\Interfaces\Repositories\ConfigRepositoryInterface;
+use ZnTool\Dev\Package\Domain\Interfaces\Repositories\PackageRepositoryInterface;
+use ZnTool\Dev\Composer\Domain\Interfaces\Services\ConfigServiceInterface;
 
 class ConfigService extends BaseCrudService implements ConfigServiceInterface
 {

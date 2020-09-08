@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpLab\Dev\Phar\Domain\Libs;
+namespace ZnTool\Dev\Phar\Domain\Libs;
 
 use Phar;
-use PhpLab\Core\Helpers\ComposerHelper;
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
+use ZnCore\Base\Helpers\ComposerHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
 use ArrayIterator;
 
 class Packager

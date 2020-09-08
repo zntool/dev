@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Interfaces\Services;
+namespace ZnTool\Dev\Generator\Domain\Interfaces\Services;
 
-use PhpLab\Dev\Generator\Domain\Dto\BuildDto;
+use ZnTool\Dev\Generator\Domain\Dto\BuildDto;
 
 interface DomainServiceInterface
 {

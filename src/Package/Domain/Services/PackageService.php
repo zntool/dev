@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Services;
+namespace ZnTool\Dev\Package\Domain\Services;
 
-use PhpLab\Core\Domain\Base\BaseCrudService;
-use PhpLab\Dev\Package\Domain\Interfaces\Repositories\PackageRepositoryInterface;
-use PhpLab\Dev\Package\Domain\Interfaces\Services\PackageServiceInterface;
+use ZnCore\Base\Domain\Base\BaseCrudService;
+use ZnTool\Dev\Package\Domain\Interfaces\Repositories\PackageRepositoryInterface;
+use ZnTool\Dev\Package\Domain\Interfaces\Services\PackageServiceInterface;
 
 class PackageService extends BaseCrudService implements PackageServiceInterface
 {

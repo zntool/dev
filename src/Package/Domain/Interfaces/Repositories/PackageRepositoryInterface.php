@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Interfaces\Repositories;
+namespace ZnTool\Dev\Package\Domain\Interfaces\Repositories;
 
-use PhpLab\Core\Domain\Interfaces\GetEntityClassInterface;
-use PhpLab\Core\Domain\Interfaces\ReadAllInterface;
-use PhpLab\Core\Domain\Interfaces\Repository\ReadOneInterface;
-use PhpLab\Core\Domain\Interfaces\Repository\RelationConfigInterface;
-use PhpLab\Core\Domain\Interfaces\Repository\RepositoryInterface;
+use ZnCore\Base\Domain\Interfaces\GetEntityClassInterface;
+use ZnCore\Base\Domain\Interfaces\ReadAllInterface;
+use ZnCore\Base\Domain\Interfaces\Repository\ReadOneInterface;
+use ZnCore\Base\Domain\Interfaces\Repository\RelationConfigInterface;
+use ZnCore\Base\Domain\Interfaces\Repository\RepositoryInterface;
 
 interface PackageRepositoryInterface extends RepositoryInterface, GetEntityClassInterface, ReadAllInterface, ReadOneInterface, RelationConfigInterface
 {

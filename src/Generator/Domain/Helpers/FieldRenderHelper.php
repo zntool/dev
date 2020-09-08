@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Helpers;
+namespace ZnTool\Dev\Generator\Domain\Helpers;
 
 class FieldRenderHelper
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Repositories\File;
+namespace ZnTool\Dev\Package\Domain\Repositories\File;
 
-use PhpLab\Core\Domain\Helpers\EntityHelper;
-use PhpLab\Core\Domain\Interfaces\Entity\EntityIdInterface;
-use PhpLab\Core\Domain\Interfaces\Repository\ReadRepositoryInterface;
-use PhpLab\Core\Domain\Libs\Query;
-use PhpLab\Core\Libs\Store\StoreFile;
-use PhpLab\Dev\Package\Domain\Entities\GroupEntity;
+use ZnCore\Base\Domain\Helpers\EntityHelper;
+use ZnCore\Base\Domain\Interfaces\Entity\EntityIdInterface;
+use ZnCore\Base\Domain\Interfaces\Repository\ReadRepositoryInterface;
+use ZnCore\Base\Domain\Libs\Query;
+use ZnCore\Base\Libs\Store\StoreFile;
+use ZnTool\Dev\Package\Domain\Entities\GroupEntity;
 
 class GroupRepository implements ReadRepositoryInterface
 {

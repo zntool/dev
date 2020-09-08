@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpLab\Dev\Package\Commands;
+namespace ZnTool\Dev\Package\Commands;
 
 use Illuminate\Support\Collection;
-use PhpLab\Dev\Package\Domain\Entities\PackageEntity;
+use ZnTool\Dev\Package\Domain\Entities\PackageEntity;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 

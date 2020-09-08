@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Services;
+namespace ZnTool\Dev\Package\Domain\Services;
 
-use PhpLab\Dev\Package\Domain\Repositories\File\InfoRepository;
+use ZnTool\Dev\Package\Domain\Repositories\File\InfoRepository;
 
 class InfoService
 {

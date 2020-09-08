@@ -1,16 +1,16 @@
 <?php
 
-namespace PhpLab\Dev\Composer\Commands;
+namespace ZnTool\Dev\Composer\Commands;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use PhpLab\Core\Console\Widgets\TextWidget;
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
-use PhpLab\Dev\Package\Domain\Entities\ConfigEntity;
-use PhpLab\Dev\Package\Domain\Helpers\ComposerConfigHelper;
-use PhpLab\Dev\Composer\Domain\Interfaces\Services\ConfigServiceInterface;
-use PhpLab\Dev\Package\Domain\Interfaces\Services\GitServiceInterface;
-use PhpLab\Dev\Package\Domain\Libs\Depend;
+use ZnCore\Base\Console\Widgets\TextWidget;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
+use ZnTool\Dev\Package\Domain\Entities\ConfigEntity;
+use ZnTool\Dev\Package\Domain\Helpers\ComposerConfigHelper;
+use ZnTool\Dev\Composer\Domain\Interfaces\Services\ConfigServiceInterface;
+use ZnTool\Dev\Package\Domain\Interfaces\Services\GitServiceInterface;
+use ZnTool\Dev\Package\Domain\Libs\Depend;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

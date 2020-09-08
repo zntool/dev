@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpLab\Dev\Phar\Commands;
+namespace ZnTool\Dev\Phar\Commands;
 
-use PhpLab\Core\Console\Widgets\LogWidget;
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
-use PhpLab\Dev\Phar\Domain\Helpers\PharHelper;
-use PhpLab\Dev\Phar\Domain\Libs\Packager;
+use ZnCore\Base\Console\Widgets\LogWidget;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
+use ZnTool\Dev\Phar\Domain\Helpers\PharHelper;
+use ZnTool\Dev\Phar\Domain\Libs\Packager;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

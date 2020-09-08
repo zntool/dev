@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Entities;
+namespace ZnTool\Dev\Package\Domain\Entities;
 
 class TagEntity
 {

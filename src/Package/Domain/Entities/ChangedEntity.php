@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Entities;
+namespace ZnTool\Dev\Package\Domain\Entities;
 
-use PhpLab\Core\Domain\Interfaces\Entity\EntityIdInterface;
-use PhpLab\Dev\Package\Domain\Enums\StatusEnum;
+use ZnCore\Base\Domain\Interfaces\Entity\EntityIdInterface;
+use ZnTool\Dev\Package\Domain\Enums\StatusEnum;
 
 class ChangedEntity
 {

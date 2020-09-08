@@ -1,19 +1,19 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Helpers;
+namespace ZnTool\Dev\Generator\Domain\Helpers;
 
-use PhpLab\Core\Legacy\Yii\Helpers\Inflector;
-use PhpLab\Dev\Generator\Domain\Dto\BuildDto;
-use PhpLab\Dev\Generator\Domain\Libs\MigrationFieldRender\CreatedAtRender;
-use PhpLab\Dev\Generator\Domain\Libs\MigrationFieldRender\IdRender;
-use PhpLab\Dev\Generator\Domain\Libs\MigrationFieldRender\MiscRender;
-use PhpLab\Dev\Generator\Domain\Libs\MigrationFieldRender\SizeRender;
-use PhpLab\Dev\Generator\Domain\Libs\MigrationFieldRender\StatusRender;
-use PhpLab\Dev\Generator\Domain\Libs\MigrationFieldRender\TimeRender;
-use PhpLab\Dev\Generator\Domain\Libs\MigrationFieldRender\TypeBooleanRender;
-use PhpLab\Dev\Generator\Domain\Libs\MigrationFieldRender\TypeIntegerRender;
-use PhpLab\Dev\Generator\Domain\Libs\MigrationFieldRender\TypeTimeRender;
-use PhpLab\Dev\Generator\Domain\Libs\MigrationFieldRender\UpdatedAtRender;
+use ZnCore\Base\Legacy\Yii\Helpers\Inflector;
+use ZnTool\Dev\Generator\Domain\Dto\BuildDto;
+use ZnTool\Dev\Generator\Domain\Libs\MigrationFieldRender\CreatedAtRender;
+use ZnTool\Dev\Generator\Domain\Libs\MigrationFieldRender\IdRender;
+use ZnTool\Dev\Generator\Domain\Libs\MigrationFieldRender\MiscRender;
+use ZnTool\Dev\Generator\Domain\Libs\MigrationFieldRender\SizeRender;
+use ZnTool\Dev\Generator\Domain\Libs\MigrationFieldRender\StatusRender;
+use ZnTool\Dev\Generator\Domain\Libs\MigrationFieldRender\TimeRender;
+use ZnTool\Dev\Generator\Domain\Libs\MigrationFieldRender\TypeBooleanRender;
+use ZnTool\Dev\Generator\Domain\Libs\MigrationFieldRender\TypeIntegerRender;
+use ZnTool\Dev\Generator\Domain\Libs\MigrationFieldRender\TypeTimeRender;
+use ZnTool\Dev\Generator\Domain\Libs\MigrationFieldRender\UpdatedAtRender;
 
 class TemplateCodeHelper
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Dev\Generator\Domain\Enums;
+namespace ZnTool\Dev\Generator\Domain\Enums;
 
 class TypeEnum
 {

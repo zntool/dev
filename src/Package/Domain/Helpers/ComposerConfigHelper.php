@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Helpers;
+namespace ZnTool\Dev\Package\Domain\Helpers;
 
 use Illuminate\Support\Collection;
-use PhpLab\Core\Legacy\Yii\Helpers\ArrayHelper;
-use PhpLab\Core\Legacy\Yii\Helpers\FileHelper;
-use PhpLab\Dev\Package\Domain\Entities\ConfigEntity;
-use PhpLab\Dev\Package\Domain\Entities\PackageEntity;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
+use ZnTool\Dev\Package\Domain\Entities\ConfigEntity;
+use ZnTool\Dev\Package\Domain\Entities\PackageEntity;
 
 class ComposerConfigHelper
 {

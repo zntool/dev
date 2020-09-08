@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpLab\Dev\Package\Domain\Enums;
+namespace ZnTool\Dev\Package\Domain\Enums;
 
 class StatusEnum
 {
