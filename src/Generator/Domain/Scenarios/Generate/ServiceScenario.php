@@ -2,7 +2,7 @@
 
 namespace ZnTool\Dev\Generator\Domain\Scenarios\Generate;
 
-use ZnCore\Base\Domain\Interfaces\Service\CrudServiceInterface;
+use ZnCore\Domain\Interfaces\Service\CrudServiceInterface;
 use ZnCore\Base\Legacy\Code\entities\ClassEntity;
 use ZnCore\Base\Legacy\Code\entities\ClassUseEntity;
 use ZnCore\Base\Legacy\Code\entities\ClassVariableEntity;
@@ -57,7 +57,7 @@ class ServiceScenario extends BaseScenario
         $interfaceEntity = new InterfaceEntity;
         $interfaceEntity->name = $this->getInterfaceFullName($className);
         if($this->buildDto->isCrudService) {
-            $uses[] = new ClassUseEntity(['name' => 'ZnCore\Base\Domain\Interfaces\Service\CrudServiceInterface']);
+            $uses[] = new ClassUseEntity(['name' => 'ZnCore\Domain\Interfaces\Service\CrudServiceInterface']);
             $interfaceEntity->extends = 'CrudServiceInterface';
         }
         ClassHelper::generate($interfaceEntity, $uses);
@@ -94,10 +94,10 @@ class ServiceScenario extends BaseScenario
 
 
         if ($this->buildDto->isCrudService) {
-            $fileGenerator->setUse('ZnCore\Base\Domain\Base\BaseCrudService');
+            $fileGenerator->setUse('ZnCore\Domain\Base\BaseCrudService');
             $classGenerator->setExtendedClass('BaseCrudService');
         } else {
-            $fileGenerator->setUse('ZnCore\Base\Domain\Base\BaseService');
+            $fileGenerator->setUse('ZnCore\Domain\Base\BaseService');
             $classGenerator->setExtendedClass('BaseService');
         }
 
@@ -141,10 +141,10 @@ class ServiceScenario extends BaseScenario
         $uses[] = new ClassUseEntity(['name' => $repositoryInterfaceFullClassName]);
 
         if($this->buildDto->isCrudService) {
-            $uses[] = new ClassUseEntity(['name' => 'ZnCore\Base\Domain\Base\BaseCrudService']);
+            $uses[] = new ClassUseEntity(['name' => 'ZnCore\Domain\Base\BaseCrudService']);
             $classEntity->extends = 'BaseCrudService';
         } else {
-            $uses[] = new ClassUseEntity(['name' => 'ZnCore\Base\Domain\Base\BaseService']);
+            $uses[] = new ClassUseEntity(['name' => 'ZnCore\Domain\Base\BaseService']);
             $classEntity->extends = 'BaseService';
         }
 

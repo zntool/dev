@@ -2,7 +2,7 @@
 
 namespace ZnTool\Dev\Package\Domain\Entities;
 
-use ZnCore\Base\Domain\Interfaces\Entity\EntityIdInterface;
+use ZnCore\Domain\Interfaces\Entity\EntityIdInterface;
 use ZnTool\Dev\Package\Domain\Enums\StatusEnum;
 
 class ChangedEntity

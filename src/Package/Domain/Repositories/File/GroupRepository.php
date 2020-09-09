@@ -2,10 +2,10 @@
 
 namespace ZnTool\Dev\Package\Domain\Repositories\File;
 
-use ZnCore\Base\Domain\Helpers\EntityHelper;
-use ZnCore\Base\Domain\Interfaces\Entity\EntityIdInterface;
-use ZnCore\Base\Domain\Interfaces\Repository\ReadRepositoryInterface;
-use ZnCore\Base\Domain\Libs\Query;
+use ZnCore\Domain\Helpers\EntityHelper;
+use ZnCore\Domain\Interfaces\Entity\EntityIdInterface;
+use ZnCore\Domain\Interfaces\Repository\ReadRepositoryInterface;
+use ZnCore\Domain\Libs\Query;
 use ZnCore\Base\Libs\Store\StoreFile;
 use ZnTool\Dev\Package\Domain\Entities\GroupEntity;
 

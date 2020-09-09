@@ -3,7 +3,7 @@
 namespace ZnTool\Dev\Package\Domain\Interfaces\Repositories;
 
 use Illuminate\Support\Collection;
-use ZnCore\Base\Domain\Interfaces\GetEntityClassInterface;
+use ZnCore\Domain\Interfaces\GetEntityClassInterface;
 use ZnTool\Dev\Package\Domain\Entities\PackageEntity;
 
 interface GitRepositoryInterface extends GetEntityClassInterface

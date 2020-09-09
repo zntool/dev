@@ -2,8 +2,8 @@
 
 namespace ZnTool\Dev\Generator\Domain\Scenarios\Generate;
 
-use ZnCore\Base\Domain\Interfaces\Repository\CrudRepositoryInterface;
-use ZnCore\Base\Domain\Interfaces\Repository\RepositoryInterface;
+use ZnCore\Domain\Interfaces\Repository\CrudRepositoryInterface;
+use ZnCore\Domain\Interfaces\Repository\RepositoryInterface;
 use ZnCore\Base\Legacy\Code\entities\ClassEntity;
 use ZnCore\Base\Legacy\Code\entities\ClassUseEntity;
 use ZnCore\Base\Legacy\Code\entities\ClassVariableEntity;
@@ -130,7 +130,7 @@ class RepositoryScenario extends BaseScenario
                 $className = BaseEloquentRepository::class;
             }
         } else {
-            //$className = 'ZnCore\Base\Domain\Base\BaseRepository';
+            //$className = 'ZnCore\Domain\Base\BaseRepository';
         }
         return $className;
     }

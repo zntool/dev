@@ -3,8 +3,8 @@
 namespace ZnTool\Dev\Package\Domain\Repositories\File;
 
 use Illuminate\Support\Collection;
-use ZnCore\Base\Domain\Interfaces\Entity\EntityIdInterface;
-use ZnCore\Base\Domain\Libs\Query;
+use ZnCore\Domain\Interfaces\Entity\EntityIdInterface;
+use ZnCore\Domain\Libs\Query;
 use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
 use ZnCore\Base\Libs\Store\StoreFile;
 use ZnTool\Dev\Package\Domain\Entities\GroupEntity;

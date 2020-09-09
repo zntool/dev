@@ -2,7 +2,7 @@
 
 namespace ZnTool\Dev\Package\Domain\Services;
 
-use ZnCore\Base\Domain\Base\BaseCrudService;
+use ZnCore\Domain\Base\BaseCrudService;
 use ZnTool\Dev\Package\Domain\Interfaces\Repositories\PackageRepositoryInterface;
 use ZnTool\Dev\Package\Domain\Interfaces\Services\PackageServiceInterface;
 

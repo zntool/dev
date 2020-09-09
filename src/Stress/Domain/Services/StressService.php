@@ -5,7 +5,7 @@ namespace ZnTool\Dev\Stress\Domain\Services;
 use GuzzleHttp\Client;
 use Illuminate\Support\Collection;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
-use ZnCore\Base\Libs\Benchmark;
+use ZnTool\Dev\Runtime\Domain\Helpers\Benchmark;
 use ZnTool\Dev\Stress\Domain\Entities\ResultEntity;
 use function GuzzleHttp\Promise\settle;
 

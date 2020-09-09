@@ -3,7 +3,7 @@
 namespace ZnTool\Dev\Package\Commands;
 
 use Illuminate\Support\Collection;
-use ZnCore\Base\Domain\Helpers\EntityHelper;
+use ZnCore\Domain\Helpers\EntityHelper;
 use ZnTool\Dev\Package\Domain\Entities\ChangedEntity;
 use ZnTool\Dev\Package\Domain\Entities\PackageEntity;
 use ZnTool\Dev\Package\Domain\Enums\StatusEnum;

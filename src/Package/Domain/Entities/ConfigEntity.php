@@ -2,10 +2,10 @@
 
 namespace ZnTool\Dev\Package\Domain\Entities;
 
-use ZnCore\Base\Domain\Interfaces\Entity\EntityIdInterface;
+use ZnCore\Domain\Interfaces\Entity\EntityIdInterface;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use Symfony\Component\Validator\Constraints as Assert;
-use ZnCore\Base\Domain\Interfaces\Entity\ValidateEntityInterface;
+use ZnCore\Domain\Interfaces\Entity\ValidateEntityInterface;
 
 class ConfigEntity implements ValidateEntityInterface, EntityIdInterface
 {

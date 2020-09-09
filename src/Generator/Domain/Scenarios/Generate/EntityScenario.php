@@ -45,11 +45,11 @@ class EntityScenario extends BaseScenario
 
         $implementedInterfaces = [];
         $fileGenerator->setUse('Symfony\Component\Validator\Constraints', 'Assert');
-        $fileGenerator->setUse('ZnCore\Base\Domain\Interfaces\Entity\ValidateEntityInterface');
+        $fileGenerator->setUse('ZnCore\Domain\Interfaces\Entity\ValidateEntityInterface');
         $implementedInterfaces[] = 'ValidateEntityInterface';
 
         if(in_array('id', $this->attributes)) {
-            $fileGenerator->setUse('ZnCore\Base\Domain\Interfaces\Entity\EntityIdInterface');
+            $fileGenerator->setUse('ZnCore\Domain\Interfaces\Entity\EntityIdInterface');
             $implementedInterfaces[] = 'EntityIdInterface';
         }
 

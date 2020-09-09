@@ -3,7 +3,7 @@
 namespace ZnTool\Dev\Package\Domain\Repositories\File;
 
 use Illuminate\Support\Collection;
-use ZnCore\Base\Domain\Helpers\EntityHelper;
+use ZnCore\Domain\Helpers\EntityHelper;
 use ZnTool\Dev\Package\Domain\Entities\CommitEntity;
 use ZnTool\Dev\Package\Domain\Entities\GitEntity;
 use ZnTool\Dev\Package\Domain\Entities\PackageEntity;
