@@ -47,7 +47,7 @@ class WebScenario extends BaseScenario
         ]);
 
         $fileGenerator->setUse('Symfony\Bundle\FrameworkBundle\Controller\AbstractController');
-        $fileGenerator->setUse('ZnSandbox\Web\Traits\AccessTrait');
+        $fileGenerator->setUse('ZnSandbox\Sandbox\Web\Symfony4\Traits\AccessTrait');
 
         $classGenerator->setExtendedClass('AbstractController');
         $classGenerator->addTrait('AccessTrait');
