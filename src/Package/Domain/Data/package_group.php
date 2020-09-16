@@ -61,4 +61,9 @@ return [
         'provider_name' => 'github',
         'authors' => [],
     ],
+    [
+        'name' => 'znyii',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
 ];
