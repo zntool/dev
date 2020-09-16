@@ -54,7 +54,7 @@ class ApiScenario extends BaseScenario
         ]);
 
         $fileGenerator->setUse('Symfony\Bundle\FrameworkBundle\Controller\AbstractController');
-        $fileGenerator->setUse('ZnSandbox\Sandbox\Web\Symfony4\Traits\AccessTrait');
+        $fileGenerator->setUse('ZnLib\Web\Symfony4\WebBundle\Traits\AccessTrait');
 
         $classGenerator->setExtendedClass('AbstractController');
         $classGenerator->addTrait('AccessTrait');
