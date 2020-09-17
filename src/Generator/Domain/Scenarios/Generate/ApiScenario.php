@@ -2,20 +2,20 @@
 
 namespace ZnTool\Dev\Generator\Domain\Scenarios\Generate;
 
-use ZnCore\Base\Legacy\Code\entities\ClassEntity;
-use ZnCore\Base\Legacy\Code\entities\ClassUseEntity;
-use ZnCore\Base\Legacy\Code\entities\ClassVariableEntity;
-use ZnCore\Base\Legacy\Code\entities\InterfaceEntity;
-use ZnCore\Base\Legacy\Code\enums\AccessEnum;
-use ZnCore\Base\Legacy\Code\helpers\ClassHelper;
-use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
-use ZnTool\Dev\Generator\Domain\Helpers\TemplateCodeHelper;
-use ZnTool\Dev\Package\Domain\Helpers\PackageHelper;
 use Zend\Code\Generator\ClassGenerator;
 use Zend\Code\Generator\FileGenerator;
 use Zend\Code\Generator\MethodGenerator;
 use Zend\Code\Generator\ParameterGenerator;
 use Zend\Code\Generator\PropertyGenerator;
+use ZnCore\Base\Legacy\Code\entities\ClassEntity;
+use ZnCore\Base\Legacy\Code\entities\ClassUseEntity;
+use ZnCore\Base\Legacy\Code\entities\ClassVariableEntity;
+use ZnCore\Base\Legacy\Code\entities\InterfaceEntity;
+use ZnCore\Base\Legacy\Code\enums\AccessEnum;
+use ZnTool\Dev\Generator\Domain\Helpers\ClassHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
+use ZnTool\Dev\Generator\Domain\Helpers\TemplateCodeHelper;
+use ZnTool\Dev\Package\Domain\Helpers\PackageHelper;
 
 class ApiScenario extends BaseScenario
 {

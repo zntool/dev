@@ -2,7 +2,7 @@
 
 namespace ZnTool\Dev\Phar\Commands;
 
-use ZnCore\Base\Console\Widgets\LogWidget;
+use ZnLib\Console\Symfony4\Widgets\LogWidget;
 use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
 use ZnTool\Dev\Phar\Domain\Helpers\PharHelper;
 use ZnTool\Dev\Phar\Domain\Libs\Packager;

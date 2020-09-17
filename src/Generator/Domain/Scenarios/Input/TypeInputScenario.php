@@ -2,7 +2,7 @@
 
 namespace ZnTool\Dev\Generator\Domain\Scenarios\Input;
 
-use ZnCore\Base\Console\Question\ChoiceQuestion;
+use ZnLib\Console\Symfony4\Question\ChoiceQuestion;
 use Symfony\Component\Console\Question\Question;
 
 class TypeInputScenario extends BaseInputScenario

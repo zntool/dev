@@ -10,7 +10,7 @@ use ZnCore\Base\Legacy\Code\entities\DocBlockEntity;
 use ZnCore\Base\Legacy\Code\entities\DocBlockParameterEntity;
 use ZnCore\Base\Legacy\Code\entities\InterfaceEntity;
 use ZnCore\Base\Legacy\Code\enums\AccessEnum;
-use ZnCore\Base\Legacy\Code\helpers\ClassHelper;
+use ZnTool\Dev\Generator\Domain\Helpers\ClassHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\Inflector;
 use ZnTool\Dev\Generator\Domain\Enums\TypeEnum;
 use ZnTool\Dev\Generator\Domain\Helpers\LocationHelper;

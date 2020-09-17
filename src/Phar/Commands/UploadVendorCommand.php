@@ -3,8 +3,8 @@
 namespace ZnTool\Dev\Phar\Commands;
 
 use Illuminate\Container\Container;
-use ZnCore\Base\Console\Widgets\LogWidget;
-use ZnCore\Base\Console\Widgets\TextWidget;
+use ZnLib\Console\Symfony4\Widgets\LogWidget;
+use ZnLib\Console\Symfony4\Widgets\TextWidget;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;

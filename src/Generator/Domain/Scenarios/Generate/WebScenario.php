@@ -7,7 +7,7 @@ use ZnCore\Base\Legacy\Code\entities\ClassUseEntity;
 use ZnCore\Base\Legacy\Code\entities\ClassVariableEntity;
 use ZnCore\Base\Legacy\Code\entities\InterfaceEntity;
 use ZnCore\Base\Legacy\Code\enums\AccessEnum;
-use ZnCore\Base\Legacy\Code\helpers\ClassHelper;
+use ZnTool\Dev\Generator\Domain\Helpers\ClassHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
 use ZnTool\Dev\Generator\Domain\Helpers\TemplateCodeHelper;
 use ZnTool\Dev\Package\Domain\Helpers\PackageHelper;

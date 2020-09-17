@@ -4,7 +4,7 @@ namespace ZnTool\Dev\Composer\Commands;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use ZnCore\Base\Console\Widgets\TextWidget;
+use ZnLib\Console\Symfony4\Widgets\TextWidget;
 use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
 use ZnTool\Dev\Package\Domain\Entities\ConfigEntity;
 use ZnTool\Dev\Package\Domain\Helpers\ComposerConfigHelper;
