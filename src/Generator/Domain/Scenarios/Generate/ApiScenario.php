@@ -43,7 +43,7 @@ class ApiScenario extends BaseScenario
         }
 
         if ($this->buildDto->isCrudController) {
-            $fileGenerator->setUse('ZnLib\Rest\Base\BaseCrudApiController');
+            $fileGenerator->setUse('ZnLib\Rest\Symfony4\Base\BaseCrudApiController');
             $classGenerator->setExtendedClass('BaseCrudApiController');
         } else {
             $fileGenerator->setUse('Symfony\Bundle\FrameworkBundle\Controller\AbstractController');
