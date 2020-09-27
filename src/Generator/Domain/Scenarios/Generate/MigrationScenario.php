@@ -34,7 +34,7 @@ class MigrationScenario extends BaseScenario
 
         $fileGenerator->setNamespace('Migrations');
         $fileGenerator->setUse('Illuminate\Database\Schema\Blueprint');
-        $fileGenerator->setUse('ZnCore\Db\Migration\Base\BaseCreateTableMigration');
+        $fileGenerator->setUse('ZnLib\Migration\Domain\Base\BaseCreateTableMigration');
 
         $tableName = $this->buildDto->domainName . '_' . $this->buildDto->name;
         $code = TemplateCodeHelper::generateMigrationClassCode($this->getClassName(), $this->buildDto->attributes, $tableName);
