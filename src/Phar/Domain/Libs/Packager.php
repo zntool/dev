@@ -103,7 +103,7 @@ class Packager
         }
     }
 
-    private function getFiles($directoryPath, $exlcudes = [])
+    private function getFiles(string $directoryPath, array $exlcudes = [])
     {
         $directoryIterator = new \RecursiveDirectoryIterator($directoryPath);
         $iterator = new \RecursiveIteratorIterator($directoryIterator);
