@@ -10,11 +10,11 @@ use ZnLib\Console\Symfony4\Helpers\CommandHelper;
  * @var Container $container
  */
 
-$container = Container::getInstance();
+//$container = Container::getInstance();
 
 // --- Application ---
 
-$container->bind(Application::class, Application::class, true);
+//$container->bind(Application::class, Application::class, true);
 
 // --- Generator ---
 

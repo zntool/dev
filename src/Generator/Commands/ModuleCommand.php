@@ -28,6 +28,7 @@ class ModuleCommand extends BaseGeneratorCommand
         $buildDto = new BuildDto;
         $this->input($input, $output, $buildDto);
         $this->moduleService->generate($buildDto);
+        return 0;
     }
 
     private function input(InputInterface $input, OutputInterface $output, BuildDto $buildDto)
