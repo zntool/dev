@@ -373,7 +373,7 @@ class GitShell extends BaseShell
     {
         $this->begin();
         $outputLines = null;
-        $lastLine = exec('LANG=en_GB git status', $outputLines);
+        $lastLine = $this->runExec('git status', $outputLines);
         $this->end();
         //dd($outputLines);
         if($this->searchText($outputLines, ['Changes not staged for commit:', 'Untracked files:', '"git add"'])) {
@@ -576,7 +576,7 @@ class GitShell extends BaseShell
      * @return static
      * @throws ShellException
      */
-    public static function init($directory, array $params = null)
+    public function init($directory, array $params = null)
     {
         if (is_dir("$directory/.git")) {
             throw new ShellException("Repo already exists in $directory.");
@@ -587,7 +587,7 @@ class GitShell extends BaseShell
         }
         $cwd = getcwd();
         chdir($directory);
-        exec(self::processCommand([
+        $this->runExec(self::processCommand([
             'git init',
             $params,
             $directory,
@@ -610,7 +610,7 @@ class GitShell extends BaseShell
      * @return static
      * @throws ShellException
      */
-    public static function cloneRepository($url, $directory = null, array $params = null)
+    public function cloneRepository($url, $directory = null, array $params = null)
     {
         if ($directory !== null && is_dir("$directory/.git")) {
             throw new ShellException("Repo already exists in $directory.");
@@ -625,7 +625,7 @@ class GitShell extends BaseShell
         if ($params === null) {
             $params = '-q';
         }
-        exec(self::processCommand([
+        $this->runExec(self::processCommand([
             'git clone',
             $params,
             $url,
@@ -643,9 +643,9 @@ class GitShell extends BaseShell
      *
      * @return bool
      */
-    public static function isRemoteUrlReadable($url, array $refs = null)
+    public function isRemoteUrlReadable($url, array $refs = null)
     {
-        exec(self::processCommand([
+        $this->runExec(self::processCommand([
                 'GIT_TERMINAL_PROMPT=0 git ls-remote',
                 '--heads',
                 '--quiet',
