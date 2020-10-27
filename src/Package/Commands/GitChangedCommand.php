@@ -83,7 +83,7 @@ class GitChangedCommand extends BaseCommand
             } elseif ($changedEntity->getStatus() == StatusEnum::NOT_FOUND_REPO) {
                 $packageName = $packageEntity->getName();
                 $gitUrl = $packageEntity->getGitUrl();
-                $fastCommand = "cd $orgDir && mkdir -p bak && mv -f {$packageName} bak/{$packageName} && git clone $gitUrl && cp -rp bak/{$packageName}/* {$packageName}/";
+                $fastCommand = "cd $orgDir && mkdir -p bak && mv -f {$packageName} bak/{$packageName} && git clone $gitUrl && cp -rp bak/{$packageName}/* {$packageName}/ && rm -rf bak/*";
                 $output->writeln("<fg=magenta> {$packageId}</> ($fastCommand)");
             }
         }
