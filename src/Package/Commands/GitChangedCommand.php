@@ -71,6 +71,7 @@ class GitChangedCommand extends BaseCommand
         $output->writeln('<fg=yellow>Has changes:</>');
         $output->writeln('');
 
+        $fastCommands = [];
         foreach ($totalCollection as $changedEntity) {
             $packageEntity = $changedEntity->getPackage();
             $packageId = $packageEntity->getId();
@@ -78,14 +79,22 @@ class GitChangedCommand extends BaseCommand
             $dir = realpath($vendorDir) . '/' . $packageId;
             $orgDir = realpath($vendorDir) . '/' . $packageEntity->getGroup()->name;
             if($changedEntity->getStatus() == StatusEnum::CHANGED) {
-                $fastCommand = "cd $dir && git add . && git commit -m upd && git push";
-                $output->writeln("<fg=yellow> {$packageId}</> ($fastCommand)");
+                $fastCommands[] = "cd $dir && git add . && git commit -m upd && git push";
+                $output->writeln("<fg=yellow> {$packageId}</>");
             } elseif ($changedEntity->getStatus() == StatusEnum::NOT_FOUND_REPO) {
                 $packageName = $packageEntity->getName();
                 $gitUrl = $packageEntity->getGitUrl();
-                $fastCommand = "cd $orgDir && mkdir -p bak && mv -f {$packageName} bak/{$packageName} && git clone $gitUrl && cp -rp bak/{$packageName}/* {$packageName}/ && rm -rf bak/*";
-                $output->writeln("<fg=magenta> {$packageId}</> ($fastCommand)");
+                $fastCommands[] = "cd $orgDir && mkdir -p bak && mv -f {$packageName} bak/{$packageName} && git clone $gitUrl && cp -rp bak/{$packageName}/* {$packageName}/ && rm -rf bak/*";
+                $output->writeln("<fg=magenta> {$packageId}</>");
             }
+        }
+        
+        $output->writeln('');
+        $output->writeln('<fg=yellow>Fast command:</>');
+        $output->writeln('');
+        
+        foreach ($fastCommands as $fastCommand) {
+            $output->writeln($fastCommand);
         }
     }
 }
