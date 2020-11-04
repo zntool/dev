@@ -90,6 +90,17 @@ class GitService extends BaseService implements GitServiceInterface
         }
     }
 
+    public function pushPackage(PackageEntity $packageEntity)
+    {
+        $git = new GitShell($packageEntity->getDirectory());
+        $result = $git->pushWithInfo();
+        if ($result == 'Already up-to-date.') {
+            return false;
+        } else {
+            return $result;
+        }
+    }
+
     public function isHasChanges(PackageEntity $packageEntity): bool
     {
         $isHas = $this->repository->isHasChanges($packageEntity);

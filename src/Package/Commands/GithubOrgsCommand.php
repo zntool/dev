@@ -28,30 +28,35 @@ class GithubOrgsCommand extends BaseCommand
         $output->writeln('<fg=white># github orgs</>');
 
         $url = 'https://api.github.com/user/orgs?access_token=' . $_ENV['GITHUB_TOKEN'];
+        $output->writeln('getting groups');
         $collection = $this->sendRequest(HttpMethodEnum::GET, $url);
         $orgs = ArrayHelper::getColumn($collection, 'login');
-        $repoCollection = [];
+        $repoCollection = new Collection();
         foreach ($orgs as $orgName) {
-            $url = "https://api.github.com/orgs/{$orgName}/repos";
-            $repos = $this->sendRequest(HttpMethodEnum::GET, $url);
-            $reposList = ArrayHelper::getColumn($repos, 'name');
-            /*$groupEntity = new GroupEntity();
-            $groupEntity->name = */
-            $orgArr = [
-                'name' => $orgName
-            ];
-            foreach ($reposList as $repoName) {
-                $repoArr = [
-                    'name' => $repoName,
-                    'org' => $orgArr,
+            if(strpos($orgName, 'zn') === 0) {
+                $url = "https://api.github.com/orgs/{$orgName}/repos";
+                $output->writeln('getting packages from: ' . $orgName);
+                $repos = $this->sendRequest(HttpMethodEnum::GET, $url);
+                $reposList = ArrayHelper::getColumn($repos, 'name');
+                $groupEntity = new GroupEntity();
+                $groupEntity->name = $orgName;
+                $groupEntity->providerName = 'github';
+                $orgArr = [
+                    'name' => $orgName
                 ];
+                foreach ($reposList as $repoName) {
+                    $packageEntity = new PackageEntity();
+                    $packageEntity->setName($repoName);
+                    $packageEntity->setGroup($groupEntity);
+                    $repoCollection->add($packageEntity);
+                }
             }
-            $repoCollection[] = $repoArr;
-            break;
         }
         $fileName = 'vendor/zntool/dev/src/Package/Domain/Data/package_origin.php';
-        LoadHelper::saveConfig($fileName, $repoCollection);
-        dd($repoCollection);
+        $array = EntityHelper::collectionToArray($repoCollection);
+        $array = ArrayHelper::collectionExtractByKeys($array, ['id', 'name', 'group']);
+
+        LoadHelper::saveConfig($fileName, $array);
 
         $output->writeln('');
         return 0;

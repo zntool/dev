@@ -14,6 +14,8 @@ interface GitServiceInterface
 
     public function pullPackage(PackageEntity $packageEntity);
 
+    public function pushPackage(PackageEntity $packageEntity);
+
     public function isNeedRelease(PackageEntity $packageEntity): bool;
 
     public function isHasChanges(PackageEntity $packageEntity): bool;
