@@ -41,7 +41,6 @@ $container->bind(\ZnTool\Dev\Package\Domain\Interfaces\Repositories\GitRepositor
 
 CommandHelper::registerFromNamespaceList([
     'ZnTool\Dev\Generator\Commands',
-    'ZnTool\Dev\Stress\Commands',
     'ZnTool\Dev\Package\Commands',
     'ZnTool\Dev\Composer\Commands',
     'ZnTool\Dev\Phar\Commands',

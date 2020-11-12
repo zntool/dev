@@ -65,7 +65,7 @@ class Benchmark
     public static function allFlat($percision = 5)
     {
         $durations = ArrayHelper::map(self::$data, 'name', 'duration');
-        $durations = array_map(function ($value) {
+        $durations = array_map(function ($value) use ($percision) {
             return round($value, $percision);
         }, $durations);
         return $durations;
