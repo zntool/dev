@@ -12,9 +12,9 @@ DotEnv::init();
 
 $container = Container::getInstance();
 $container->bind(Application::class, Application::class, true);
-$container->bind(Manager::class, function () {
+/*$container->bind(Manager::class, function () {
     return ManagerFactory::createManagerFromEnv();
-}, true);
+}, true);*/
 $application = $container->get(Application::class);
 
 require __DIR__ . '/bootstrap.php';
