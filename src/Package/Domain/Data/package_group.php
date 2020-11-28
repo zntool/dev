@@ -7,6 +7,11 @@ return [
         'authors' => [],
     ],
     [
+        'name' => 'znkaz',
+        'provider_name' => 'github',
+        'authors' => [],
+    ],
+    [
         'name' => 'zncore',
         'provider_name' => 'github',
         'authors' => [],
