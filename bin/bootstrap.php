@@ -43,5 +43,4 @@ CommandHelper::registerFromNamespaceList([
     'ZnTool\Dev\Generator\Commands',
     'ZnTool\Dev\Package\Commands',
     'ZnTool\Dev\Composer\Commands',
-    'ZnTool\Dev\Phar\Commands',
 ], $container);
