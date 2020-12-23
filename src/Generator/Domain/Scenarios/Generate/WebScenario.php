@@ -10,7 +10,7 @@ use ZnCore\Base\Legacy\Code\enums\AccessEnum;
 use ZnTool\Dev\Generator\Domain\Helpers\ClassHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
 use ZnTool\Dev\Generator\Domain\Helpers\TemplateCodeHelper;
-use ZnTool\Dev\Package\Domain\Helpers\PackageHelper;
+use ZnTool\Package\Domain\Helpers\PackageHelper;
 use Zend\Code\Generator\ClassGenerator;
 use Zend\Code\Generator\FileGenerator;
 use Zend\Code\Generator\MethodGenerator;

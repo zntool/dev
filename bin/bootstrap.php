@@ -29,18 +29,18 @@ $container->bind(\ZnTool\Dev\Composer\Domain\Interfaces\Services\ConfigServiceIn
 
 // --- Package ---
 
-$container->bind(\ZnTool\Dev\Package\Domain\Interfaces\Services\GitServiceInterface::class, \ZnTool\Dev\Package\Domain\Services\GitService::class);
-$container->bind(\ZnTool\Dev\Package\Domain\Interfaces\Services\PackageServiceInterface::class, \ZnTool\Dev\Package\Domain\Services\PackageService::class);
-$container->bind(\ZnTool\Dev\Package\Domain\Repositories\File\GroupRepository::class, function () {
+$container->bind(\ZnTool\Package\Domain\Interfaces\Services\GitServiceInterface::class, \ZnTool\Package\Domain\Services\GitService::class);
+$container->bind(\ZnTool\Package\Domain\Interfaces\Services\PackageServiceInterface::class, \ZnTool\Package\Domain\Services\PackageService::class);
+$container->bind(\ZnTool\Package\Domain\Repositories\File\GroupRepository::class, function () {
     $fileName = ! empty($_ENV['PACKAGE_GROUP_CONFIG']) ? __DIR__ . '/../../../../' . $_ENV['PACKAGE_GROUP_CONFIG'] : __DIR__ . '/../src/Package/Domain/Data/package_group.php';
-    $repo = new \ZnTool\Dev\Package\Domain\Repositories\File\GroupRepository($fileName);
+    $repo = new \ZnTool\Package\Domain\Repositories\File\GroupRepository($fileName);
     return $repo;
 });
-$container->bind(\ZnTool\Dev\Package\Domain\Interfaces\Repositories\PackageRepositoryInterface::class, \ZnTool\Dev\Package\Domain\Repositories\File\PackageRepository::class);
-$container->bind(\ZnTool\Dev\Package\Domain\Interfaces\Repositories\GitRepositoryInterface::class, \ZnTool\Dev\Package\Domain\Repositories\File\GitRepository::class);
+$container->bind(\ZnTool\Package\Domain\Interfaces\Repositories\PackageRepositoryInterface::class, \ZnTool\Package\Domain\Repositories\File\PackageRepository::class);
+$container->bind(\ZnTool\Package\Domain\Interfaces\Repositories\GitRepositoryInterface::class, \ZnTool\Package\Domain\Repositories\File\GitRepository::class);
 
 CommandHelper::registerFromNamespaceList([
     'ZnTool\Dev\Generator\Commands',
-    'ZnTool\Dev\Package\Commands',
+    'ZnTool\Package\Commands',
     'ZnTool\Dev\Composer\Commands',
 ], $container);

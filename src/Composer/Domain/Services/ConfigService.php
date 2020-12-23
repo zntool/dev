@@ -6,10 +6,10 @@ use Illuminate\Support\Collection;
 use ZnCore\Domain\Base\BaseCrudService;
 use ZnCore\Domain\Libs\Query;
 use ZnCore\Base\Libs\Store\StoreFile;
-use ZnTool\Dev\Package\Domain\Entities\ConfigEntity;
-use ZnTool\Dev\Package\Domain\Entities\PackageEntity;
+use ZnTool\Package\Domain\Entities\ConfigEntity;
+use ZnTool\Package\Domain\Entities\PackageEntity;
 use ZnTool\Dev\Composer\Domain\Interfaces\Repositories\ConfigRepositoryInterface;
-use ZnTool\Dev\Package\Domain\Interfaces\Repositories\PackageRepositoryInterface;
+use ZnTool\Package\Domain\Interfaces\Repositories\PackageRepositoryInterface;
 use ZnTool\Dev\Composer\Domain\Interfaces\Services\ConfigServiceInterface;
 
 class ConfigService extends BaseCrudService implements ConfigServiceInterface

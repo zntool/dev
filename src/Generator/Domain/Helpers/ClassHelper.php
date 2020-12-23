@@ -12,7 +12,7 @@ use ZnCore\Base\Legacy\Code\entities\InterfaceEntity;
 use ZnCore\Base\Legacy\Code\render\ClassRender;
 use ZnCore\Base\Legacy\Code\render\InterfaceRender;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
-use ZnTool\Dev\Package\Domain\Helpers\PackageHelper;
+use ZnTool\Package\Domain\Helpers\PackageHelper;
 
 class ClassHelper
 {
