@@ -2,17 +2,17 @@
 
 namespace ZnTool\Dev\Generator\Domain\Scenarios\Generate;
 
+use Zend\Code\Generator\ClassGenerator;
+use Zend\Code\Generator\FileGenerator;
+use Zend\Code\Generator\InterfaceGenerator;
 use ZnCore\Base\Legacy\Code\entities\ClassEntity;
 use ZnCore\Base\Legacy\Code\entities\ClassUseEntity;
 use ZnCore\Base\Legacy\Code\entities\ClassVariableEntity;
 use ZnCore\Base\Legacy\Code\entities\InterfaceEntity;
 use ZnCore\Base\Legacy\Code\enums\AccessEnum;
-use ZnTool\Dev\Generator\Domain\Helpers\ClassHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\Inflector;
 use ZnTool\Dev\Generator\Domain\Dto\BuildDto;
-use Zend\Code\Generator\ClassGenerator;
-use Zend\Code\Generator\FileGenerator;
-use Zend\Code\Generator\InterfaceGenerator;
+use ZnTool\Dev\Generator\Domain\Helpers\ClassHelper;
 
 abstract class BaseScenario
 {
@@ -82,12 +82,6 @@ abstract class BaseScenario
         $fileGenerator->setUse($this->getInterfaceFullName());
         $fileGenerator->setNamespace($this->domainNamespace . '\\' . $this->interfaceDir());
         ClassHelper::generateFile($this->getInterfaceName(), $fileGenerator->generate());
-
-        /*$className = $this->getClassName();
-        $interfaceEntity = new InterfaceEntity;
-        $interfaceEntity->name = $this->getInterfaceFullName($className);
-        ClassHelper::generate($interfaceEntity);
-        return $interfaceEntity;*/
     }
 
     protected function createClass()
@@ -111,36 +105,5 @@ abstract class BaseScenario
         $fileGenerator->setNamespace($this->domainNamespace . '\\' . $this->classDir());
         $fileGenerator->setClass($classGenerator);
         ClassHelper::generateFile($fileGenerator->getNamespace() . '\\' . $className, $fileGenerator->generate());
-
-
-        /*$classGenerator->addMethods([
-            MethodGenerator::fromArray([
-                'name' => 'getName',
-                'body' => "return '{$this->buildDto->domainName}';",
-            ]),
-        ]);*/
-
-
-        /*$className = $this->getClassName();
-        $uses = [];
-        $classEntity = new ClassEntity;
-        $classEntity->name = $this->domainNamespace . '\\' . $this->classDir() . '\\' . $className;
-        if($this->isMakeInterface()) {
-            $useEntity = new ClassUseEntity;
-            $useEntity->name = $this->getInterfaceFullName();
-            $uses[] = $useEntity;
-            $classEntity->implements = $this->getInterfaceName();
-        }
-
-        if($this->attributes) {
-            foreach ($this->attributes as $attribute) {
-                $variableEntity = new ClassVariableEntity;
-                $variableEntity->name = Inflector::variablize($attribute);
-                //$variableEntity->access = AccessEnum::PRIVATE;
-                $classEntity->addVariable($variableEntity);
-            }
-        }
-        ClassHelper::generate($classEntity, $uses);
-        return $classEntity;*/
     }
 }
