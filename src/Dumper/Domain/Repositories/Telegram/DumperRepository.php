@@ -14,10 +14,14 @@ class DumperRepository
         $this->adminId = $adminId;
     }
 
-    public function send($messageData, $chatId = null)
+    public function send($messageData, $chatId = null, bool $isEncode = true)
     {
         $url = "https://api.telegram.org/bot" . $this->token . '/sendMessage';
-        $messageText = json_encode($messageData, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+        if($isEncode) {
+            $messageText = json_encode($messageData, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+        } else {
+            $messageText = $messageData;
+        }
         $chatId = $chatId ?: $this->adminId;
         $body = [
             'chat_id' => $chatId,
