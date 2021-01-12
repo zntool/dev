@@ -3,7 +3,7 @@
 namespace ZnTool\Dev\Dumper\Domain\Facades;
 
 use Illuminate\Container\EntryNotFoundException;
-use ZnLib\Web\Symfony4\MicroApp\ContainerHelper;
+use ZnCore\Base\Libs\App\Helpers\ContainerHelper;
 use ZnTool\Dev\Dumper\Domain\Repositories\Telegram\DumperRepository;
 
 class Bot
