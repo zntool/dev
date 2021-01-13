@@ -97,7 +97,7 @@ class Benchmark
 
     private static function getFileName()
     {
-        $dir = ROOT_DIR . '/common/runtime/logs/benchmark';
+        $dir = __DIR__ . '/../../../../../../../common/runtime/logs/benchmark';
         $file = self::getRequestId() . '.json';
         return $dir . DIRECTORY_SEPARATOR . $file;
     }
