@@ -2,10 +2,9 @@
 
 namespace ZnTool\Dev\Runtime\Domain\Helpers;
 
-use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
-use php7extension\yii\web\ServerErrorHttpException;
-use php7rails\app\helpers\EnvService;
+use ZnCore\Base\Exceptions\InternalServerErrorException;
 use ZnCore\Base\Helpers\StringHelper;
+use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Base\Libs\Store\StoreFile;
 
 class Benchmark
@@ -43,7 +42,7 @@ class Benchmark
         }
 
         if ( ! isset($item['begin'])) {
-            throw new ServerErrorHttpException('Benchmark not be started!');
+            throw new InternalServerErrorException('Benchmark not be started!');
         }
         $item['end'] = $microTime;
         if ($data) {
@@ -84,7 +83,7 @@ class Benchmark
     private static function isEnable()
     {
         return true;
-        return EnvService::get('mode.benchmark', false);
+        //return EnvService::get('mode.benchmark', false);
     }
 
     private static function getRequestId()
