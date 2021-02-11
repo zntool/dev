@@ -19,7 +19,7 @@ class ConfigService extends BaseCrudService implements ConfigServiceInterface
 
     public function __construct(ConfigRepositoryInterface $repository, PackageRepositoryInterface $packageRepository)
     {
-        $this->repository = $repository;
+        $this->setRepository($repository);
         $this->packageRepository = $packageRepository;
     }
 
