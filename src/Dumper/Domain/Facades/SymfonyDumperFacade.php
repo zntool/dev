@@ -37,14 +37,14 @@ class SymfonyDumperFacade
 
     private static function createServerDumper(): DataDumperInterface
     {
-        $fallbackDumper = self::getDumper();
-        $contextProviders = [
-            'cli' => new CliContextProvider(),
-            'source' => new SourceContextProvider(),
-        ];
         if (self::$driver == 'telegram') {
-            return new TelegramDumper(self::URL, $fallbackDumper, $contextProviders);
+            return new TelegramDumper($_ENV['VAR_DUMPER_BOT_TOKEN'], $_ENV['VAR_DUMPER_BOT_CHAT_ID']);
         } elseif (self::$driver == 'console') {
+            $fallbackDumper = self::getDumper();
+            $contextProviders = [
+                'cli' => new CliContextProvider(),
+                'source' => new SourceContextProvider(),
+            ];
             return new ServerDumper(self::URL, $fallbackDumper, $contextProviders);
         } else {
             throw new InvalidConfigException('Unknown dumper driver "' . self::$driver . '"! See env config "VAR_DUMPER_OUTPUT".');
