@@ -1,6 +1,6 @@
 <?php
 
-namespace ZnTool\Dev\Dumper\Domain\Facades;
+namespace ZnTool\Dev\VarDumper\Facades;
 
 use Symfony\Component\VarDumper\Cloner\VarCloner;
 use Symfony\Component\VarDumper\Dumper\AbstractDumper;
@@ -13,7 +13,7 @@ use Symfony\Component\VarDumper\Dumper\ServerDumper;
 use Symfony\Component\VarDumper\VarDumper;
 use ZnCore\Base\Exceptions\InvalidConfigException;
 use ZnCore\Base\Helpers\EnvHelper;
-use ZnTool\Dev\Dumper\Domain\Dumper\TelegramDumper;
+use ZnTool\Dev\VarDumper\Dumper\TelegramDumper;
 
 class SymfonyDumperFacade
 {
