@@ -94,7 +94,7 @@ class Benchmark
         return self::$sessionId;
     }
 
-    private static function getFileName()
+    /*private static function getFileName()
     {
         $dir = __DIR__ . '/../../../../../../../common/runtime/logs/benchmark';
         $file = self::getRequestId() . '.json';
@@ -106,7 +106,7 @@ class Benchmark
         $fileName = self::getFileName();
         $store = new StoreFile($fileName);
         return $store;
-    }
+    }*/
 
     private static function append($item)
     {
