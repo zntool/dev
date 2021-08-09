@@ -7,9 +7,12 @@ use ZnSandbox\Sandbox\Error\Symfony4\Web\Controllers\ErrorController;
 
 require __DIR__ . '/../../../../../../vendor/autoload.php';
 
+throw new \ZnCore\Base\Exceptions\DeprecatedException();
+
 $bundles = [
     new \ZnBundle\Log\Bundle(['all']),
     new \ZnLib\Web\Bundle(['all']),
+    new \ZnLib\Db\Bundle(['all']),
     new \ZnBundle\Dashboard\Bundle(['all']),
     new \ZnBundle\Notify\Bundle(['all']),
     new \ZnBundle\Language\BundleNew(['all']),
