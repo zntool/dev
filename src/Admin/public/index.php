@@ -29,7 +29,6 @@ $bundles = [
 //    new \ZnCrypt\Jwt\Bundle(['all']),
     //new \ZnBundle\Reference\Bundle(['all']),
     //new \App\Person\Bundle(['all']),
-//    new \App\Certification\Bundle(['all']),
     //new \ZnSandbox\Sandbox\Settings\Bundle(['all']),
 //    new \ZnBundle\Queue\Bundle(['all', 'console']),
 //    new \ZnBundle\Person\Bundle(['all']),
