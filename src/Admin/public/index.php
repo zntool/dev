@@ -19,7 +19,7 @@ $bundles = [
     new \ZnBundle\Summary\Bundle(['all']),
     new \ZnBundle\User\NewBundle(['all']),
     new \ZnSandbox\Sandbox\Layout\Bundle(['all']),
-    new \ZnSandbox\Sandbox\Casbin\Bundle(['all']),
+    new \ZnUser\Rbac\Bundle(['all']),
     new \ZnSandbox\Sandbox\Symfony\Bundle(['all']),
     new \ZnUser\Notify\Bundle(['all']),
 
