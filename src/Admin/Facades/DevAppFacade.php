@@ -26,7 +26,7 @@ class DevAppFacade
             new \ZnSandbox\Sandbox\Layout\Bundle(['all']),
             new \ZnSandbox\Sandbox\Casbin\Bundle(['all']),
             new \ZnSandbox\Sandbox\Symfony\Bundle(['all']),
-            new \ZnSandbox\Sandbox\UserNotify\Bundle(['all']),
+            new \ZnUser\Notify\Bundle(['all']),
 
 //            new \ZnLib\Rpc\Bundle(['all']),
 //            new \ZnUser\Password\Bundle(['all']),
