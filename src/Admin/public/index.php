@@ -24,7 +24,7 @@ $bundles = [
     new \ZnSandbox\Sandbox\UserNotify\Bundle(['all']),
 
     //new \ZnLib\Rpc\Bundle(['all']),
-//    new \ZnSandbox\Sandbox\UserSecurity\Bundle(['all']),
+//    new \ZnUser\Password\Bundle(['all']),
     //new \ZnSandbox\Sandbox\Application\Bundle(['all']),
 //    new \ZnCrypt\Jwt\Bundle(['all']),
     //new \ZnBundle\Reference\Bundle(['all']),
