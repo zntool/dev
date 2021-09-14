@@ -43,11 +43,16 @@ class DevAppFacade
         ];
     }
 
-    public static function runApp(array $appBundles = []) {
+    public static function createAppInstance(array $appBundles = []) {
         $bundles = self::getBundles();
         $bundles = ArrayHelper::merge($bundles, $appBundles);
         $kernel = KernelFactory::createWebKernel($bundles, ['i18next', 'container', 'symfonyAdmin']);
         $application = self::createApp($kernel);
+        return $application;
+    }
+
+    public static function runApp(array $appBundles = []) {
+        $application = self::createAppInstance($appBundles);
         $response = $application->run();
         $response->send();
     }
