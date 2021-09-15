@@ -2,6 +2,7 @@
 
 namespace ZnTool\Dev\Admin\Facades;
 
+use ZnCore\Base\Helpers\InstanceHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Base\Libs\App\Factories\ApplicationFactory;
 use ZnCore\Base\Libs\App\Factories\KernelFactory;
@@ -44,6 +45,15 @@ class DevAppFacade
     }
 
     public static function createAppInstance(array $appBundles = []) {
+
+        foreach ($appBundles as &$bundleClass) {
+            $bundleClass = InstanceHelper::ensure($bundleClass, [['all']]);
+            /*if(class_exists($bundleClass)) {
+                $bundleInstance = InstanceHelper::create($bundleClass, [['all']]);
+                $bundles[] = $bundleInstance;
+            }*/
+        }
+        
         $bundles = self::getBundles();
         $bundles = ArrayHelper::merge($bundles, $appBundles);
         $kernel = KernelFactory::createWebKernel($bundles, ['i18next', 'container', 'symfonyAdmin']);
