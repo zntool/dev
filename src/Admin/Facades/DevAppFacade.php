@@ -56,7 +56,7 @@ class DevAppFacade
         
         $bundles = self::getBundles();
         $bundles = ArrayHelper::merge($bundles, $appBundles);
-        $kernel = KernelFactory::createWebKernel($bundles, ['i18next', 'container', 'symfonyAdmin']);
+        $kernel = KernelFactory::createWebKernel($bundles, ['i18next', 'container', 'symfonyAdmin', 'symfonyRpc']);
         $application = self::createApp($kernel);
         return $application;
     }
