@@ -7,6 +7,12 @@ use ZnCore\Base\Helpers\StringHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Base\Libs\Store\StoreFile;
 
+/**
+ * Class Benchmark
+ * @package ZnTool\Dev\Runtime\Domain\Helpers
+ * @deprecated 
+ * @see ZnCore\Base\Libs\Benchmark
+ */
 class Benchmark
 {
 
