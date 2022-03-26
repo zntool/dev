@@ -12,7 +12,9 @@ throw new \ZnCore\Base\Exceptions\DeprecatedException();
 $bundles = [
     new \ZnBundle\Log\Bundle(['all']),
     new \ZnLib\Web\Bundle(['all']),
-    new \ZnLib\Db\Bundle(['all']),
+//    new \ZnLib\Db\Bundle(['all']),
+    new \ZnDatabase\Base\Bundle(['all']),
+//    new \ZnDatabase\Tool\Bundle(['all']),
     new \ZnBundle\Dashboard\Bundle(['all']),
     new \ZnBundle\Notify\Bundle(['all']),
     new \ZnBundle\Language\BundleNew(['all']),
