@@ -40,7 +40,7 @@ class DevAppFacade
 //            new \ZnBundle\Person\Bundle(['all']),
 //            new \ZnBundle\Eav\Bundle(['all']),
 //            new \App\Common\Bundle(['all']),
-//            new \ZnSandbox\Sandbox\Rpc\Bundle(['all']),
+//            new \ZnLib\Rpc\Bundle(['all']),
         ];
     }
 
