@@ -27,7 +27,7 @@ class DevAppFacade
             new \ZnBundle\Notify\Bundle(['all']),
             new \ZnBundle\Language\BundleNew(['all']),
             new \ZnBundle\Summary\Bundle(['all']),
-            new \ZnBundle\User\NewBundle(['all']),
+            new \ZnBundle\User\Bundle(['all']),
             new \ZnSandbox\Sandbox\Layout\Bundle(['all']),
             new \ZnUser\Rbac\Bundle(['all']),
             new \ZnSandbox\Sandbox\Symfony\Bundle(['all']),
