@@ -27,10 +27,17 @@ class DevAppFacade
             new \ZnBundle\Notify\Bundle(['all']),
             new \ZnBundle\Language\BundleNew(['all']),
             new \ZnBundle\Summary\Bundle(['all']),
-            new \ZnBundle\User\Bundle(['all']),
+            new \ZnUser\Identity\Bundle(['all']),
             new \ZnSandbox\Sandbox\Layout\Bundle(['all']),
             new \ZnUser\Rbac\Bundle(['all']),
-            new \ZnSandbox\Sandbox\Symfony\Bundle(['all']),
+
+
+            new \ZnCore\Base\Bundle(['all']),
+            new \ZnCore\Base\Libs\I18Next\Bundle(['all']),
+            new \ZnCore\Base\Libs\App\Bundle(['all']),
+            new \ZnSandbox\Sandbox\Symfony\NewBundle(['all']),
+//            new \ZnSandbox\Sandbox\Symfony\Bundle(['all']),
+
             new \ZnUser\Notify\Bundle(['all']),
 
 //            new \ZnLib\Rpc\Bundle(['all']),
