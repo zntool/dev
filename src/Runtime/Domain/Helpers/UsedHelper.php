@@ -4,6 +4,7 @@ namespace ZnTool\Dev\Runtime\Domain\Helpers;
 
 use Faker\Provider\File;
 use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
+use ZnCore\Base\Libs\FileSystem\Helpers\FileStorageHelper;
 
 class UsedHelper
 {
@@ -26,7 +27,7 @@ class UsedHelper
 
 
             $json = json_encode($all, JSON_PRETTY_PRINT);
-            FileHelper::save($file, $json);
+            FileStorageHelper::save($file, $json);
         });
     }
 
