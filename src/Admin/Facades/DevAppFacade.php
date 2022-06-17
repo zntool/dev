@@ -6,6 +6,10 @@ use ZnCore\Base\Helpers\InstanceHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Base\Libs\App\Factories\ApplicationFactory;
 use ZnCore\Base\Libs\App\Factories\KernelFactory;
+use ZnCore\Base\Libs\App\Helpers\EnvHelper;
+use ZnCore\Base\Libs\App\Kernel;
+use ZnCore\Base\Libs\App\Loaders\BundleLoader;
+use ZnCore\Base\Libs\DotEnv\DotEnv;
 use ZnCore\Contract\Kernel\Interfaces\KernelInterface;
 use ZnLib\Web\Symfony4\MicroApp\MicroApp;
 use ZnLib\Web\Symfony4\Subscribers\TokenSubscriber;
@@ -67,9 +71,28 @@ class DevAppFacade
         
         $bundles = self::getBundles();
         $bundles = ArrayHelper::merge($bundles, $appBundles);
-        $kernel = KernelFactory::createWebKernel($bundles, ['i18next', 'container', 'symfonyAdmin', 'rbac', 'symfonyRpc']);
+
+
+        self::init();
+        $bundleLoader = new BundleLoader($bundles, ['i18next', 'container', 'symfonyAdmin', 'rbac', 'symfonyRpc']);
+        $kernel = new Kernel('web');
+        $kernel->setLoader($bundleLoader);
+
+//        $kernel = KernelFactory::createWebKernel($bundles, ['i18next', 'container', 'symfonyAdmin', 'rbac', 'symfonyRpc']);
+
+
+
         $application = self::createApp($kernel);
         return $application;
+    }
+
+    protected static function init() {
+//        $_ENV['ROOT_PATH'] = FileHelper::rootPath();
+        EnvHelper::prepareTestEnv();
+        DotEnv::init();
+        //self::initVarDumper();
+        //CorsHelper::autoload();
+        EnvHelper::setErrorVisibleFromEnv();
     }
 
     public static function runApp(array $appBundles = []) {
@@ -79,7 +102,15 @@ class DevAppFacade
     }
 
     public static function createApp(KernelInterface $kernel): MicroApp {
-        $application = ApplicationFactory::createWeb($kernel);
+
+
+        $config = $kernel->loadAppConfig();
+        $container = $kernel->getContainer();
+//        $configManager = self::getConfigManager($container);
+//        dd($configManager);
+        $application = new MicroApp($container, $config['routeCollection']);
+
+//        $application = ApplicationFactory::createWeb($kernel);
         $application->setLayout(__DIR__ . '/../../../../../../vendor/znsymfony/admin-panel/src/Symfony4/Admin/views/layouts/admin/main.php');
         $application->addLayoutParam('menuConfigFile', __DIR__ . '/../../../../../../vendor/znsymfony/admin-panel/src/Symfony4/Admin/config/admin_sidebar.php');
         $application->setErrorController(ErrorController::class);
