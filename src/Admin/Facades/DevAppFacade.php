@@ -2,6 +2,8 @@
 
 namespace ZnTool\Dev\Admin\Facades;
 
+use Symfony\Component\Routing\RouteCollection;
+use ZnCore\Base\Helpers\DeprecateHelper;
 use ZnCore\Base\Helpers\InstanceHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Base\Libs\App\Factories\ApplicationFactory;
@@ -14,6 +16,8 @@ use ZnCore\Contract\Kernel\Interfaces\KernelInterface;
 use ZnLib\Web\Symfony4\MicroApp\MicroApp;
 use ZnLib\Web\Symfony4\Subscribers\TokenSubscriber;
 use ZnSandbox\Sandbox\Error\Symfony4\Web\Controllers\ErrorController;
+
+DeprecateHelper::hardThrow();
 
 class DevAppFacade
 {
@@ -108,7 +112,9 @@ class DevAppFacade
         $container = $kernel->getContainer();
 //        $configManager = self::getConfigManager($container);
 //        dd($configManager);
-        $application = new MicroApp($container, $config['routeCollection']);
+        $routes = $container->get(RouteCollection::class); //new RouteCollection();
+//dd($routes);
+        $application = new MicroApp($container/*, $config['routeCollection']*/);
 
 //        $application = ApplicationFactory::createWeb($kernel);
         $application->setLayout(__DIR__ . '/../../../../../../vendor/znsymfony/admin-panel/src/Symfony4/Admin/views/layouts/admin/main.php');
