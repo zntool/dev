@@ -95,7 +95,7 @@ class Benchmark
     private static function getRequestId()
     {
         if ( ! self::$sessionId) {
-            self::$sessionId = time() . '.' . StringHelper::generateRandomString();
+            self::$sessionId = time() . '.' . StringHelper::generateRandomString(8);
         }
         return self::$sessionId;
     }
