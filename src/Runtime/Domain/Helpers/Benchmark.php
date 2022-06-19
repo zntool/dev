@@ -3,14 +3,13 @@
 namespace ZnTool\Dev\Runtime\Domain\Helpers;
 
 use ZnCore\Base\Exceptions\InternalServerErrorException;
-use ZnCore\Base\Libs\Text\Helpers\StringHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
-use ZnCore\Base\Libs\Store\StoreFile;
+use ZnCore\Base\Libs\Text\Libs\RandomString;
 
 /**
  * Class Benchmark
  * @package ZnTool\Dev\Runtime\Domain\Helpers
- * @deprecated 
+ * @deprecated
  * @see ZnCore\Base\Libs\Benchmark
  */
 class Benchmark
@@ -22,7 +21,7 @@ class Benchmark
     public static function begin($name, $data = null)
     {
         $microTime = microtime(true);
-        if ( ! self::isEnable()) {
+        if (!self::isEnable()) {
             return;
         }
         $name = self::getName($name);
@@ -35,11 +34,11 @@ class Benchmark
     public static function end($name, $data = null)
     {
         $microTime = microtime(true);
-        if ( ! self::isEnable()) {
+        if (!self::isEnable()) {
             return;
         }
         $name = self::getName($name);
-        if ( ! isset(self::$data[$name])) {
+        if (!isset(self::$data[$name])) {
             return;
         }
         $item = self::$data[$name];
@@ -47,7 +46,7 @@ class Benchmark
             return;
         }
 
-        if ( ! isset($item['begin'])) {
+        if (!isset($item['begin'])) {
             throw new InternalServerErrorException('Benchmark not be started!');
         }
         $item['end'] = $microTime;
@@ -94,8 +93,8 @@ class Benchmark
 
     private static function getRequestId()
     {
-        if ( ! self::$sessionId) {
-            self::$sessionId = time() . '.' . StringHelper::generateRandomString(8);
+        if (!self::$sessionId) {
+            self::$sessionId = time() . '.' . RandomString::generateNumLowerUpper(8);
         }
         return self::$sessionId;
     }
@@ -117,11 +116,11 @@ class Benchmark
     private static function append($item)
     {
         $name = $item['name'];
-        if ( ! empty($item['end'])) {
+        if (!empty($item['end'])) {
             $item['duration'] = $item['end'] - $item['begin'];
         }
         self::$data[$name] = $item;
-        if ( ! empty($item['duration'])) {
+        if (!empty($item['duration'])) {
             /*$store = self::getStoreInstance();
             $store->save([
                 '_SERVER' => $_SERVER,
