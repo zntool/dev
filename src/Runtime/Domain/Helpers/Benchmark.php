@@ -3,7 +3,7 @@
 namespace ZnTool\Dev\Runtime\Domain\Helpers;
 
 use ZnCore\Base\Exceptions\InternalServerErrorException;
-use ZnCore\Base\Helpers\StringHelper;
+use ZnCore\Base\Libs\Text\Helpers\StringHelper;
 use ZnCore\Base\Legacy\Yii\Helpers\ArrayHelper;
 use ZnCore\Base\Libs\Store\StoreFile;
 
