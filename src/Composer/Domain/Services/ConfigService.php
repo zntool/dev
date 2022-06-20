@@ -4,7 +4,7 @@ namespace ZnTool\Dev\Composer\Domain\Services;
 
 use Illuminate\Support\Collection;
 use ZnCore\Domain\Base\BaseCrudService;
-use ZnCore\Domain\Libs\Query;
+use ZnCore\Base\Libs\Query\Entities\Query;
 use ZnCore\Base\Libs\Store\StoreFile;
 use ZnTool\Package\Domain\Entities\ConfigEntity;
 use ZnTool\Package\Domain\Entities\PackageEntity;
