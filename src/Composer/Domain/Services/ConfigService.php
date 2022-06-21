@@ -3,6 +3,7 @@
 namespace ZnTool\Dev\Composer\Domain\Services;
 
 use Illuminate\Support\Collection;
+use Illuminate\Support\Enumerable;
 use ZnCore\Base\Libs\Service\Base\BaseCrudService;
 use ZnCore\Base\Libs\Query\Entities\Query;
 use ZnCore\Base\Libs\Store\StoreFile;
@@ -23,7 +24,7 @@ class ConfigService extends BaseCrudService implements ConfigServiceInterface
         $this->packageRepository = $packageRepository;
     }
 
-    public function all(Query $query = null)
+    public function all(Query $query = null): Enumerable
     {
         /** @var Collection | PackageEntity[] $packageCollection */
         $packageCollection = $this->packageRepository->all();
