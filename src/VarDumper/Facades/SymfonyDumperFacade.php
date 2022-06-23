@@ -11,7 +11,7 @@ use Symfony\Component\VarDumper\Dumper\DataDumperInterface;
 use Symfony\Component\VarDumper\Dumper\HtmlDumper;
 use Symfony\Component\VarDumper\Dumper\ServerDumper;
 use Symfony\Component\VarDumper\VarDumper;
-use ZnCore\Base\Exceptions\InvalidConfigException;
+use ZnCore\Contract\Common\Exceptions\InvalidConfigException;
 use ZnCore\Base\Libs\App\Helpers\EnvHelper;
 use ZnTool\Dev\VarDumper\Dumper\TelegramDumper;
 

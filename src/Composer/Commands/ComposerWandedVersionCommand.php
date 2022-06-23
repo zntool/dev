@@ -2,20 +2,18 @@
 
 namespace ZnTool\Dev\Composer\Commands;
 
-use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
-use ZnTool\Package\Domain\Entities\ConfigEntity;
-use ZnTool\Package\Domain\Helpers\ComposerConfigHelper;
-use ZnTool\Dev\Composer\Domain\Interfaces\Services\ConfigServiceInterface;
-use ZnTool\Package\Domain\Interfaces\Services\GitServiceInterface;
-use ZnTool\Package\Domain\Libs\Depend;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Yaml\Yaml;
 use yii\helpers\ArrayHelper;
-use Symfony\Component\Console\Helper\ProgressBar;
+use ZnTool\Dev\Composer\Domain\Interfaces\Services\ConfigServiceInterface;
+use ZnTool\Package\Domain\Entities\ConfigEntity;
+use ZnTool\Package\Domain\Helpers\ComposerConfigHelper;
+use ZnTool\Package\Domain\Interfaces\Services\GitServiceInterface;
+use ZnTool\Package\Domain\Libs\Depend;
 
 class ComposerWandedVersionCommand extends Command
 {
@@ -59,7 +57,7 @@ class ComposerWandedVersionCommand extends Command
         $progressBar->setMaxSteps($collection->count());
         $progressBar->start();
         $depend = new Depend($namespacesPackages, $lastVersions);
-        $deps = $depend->allDepends($collection, function() use($progressBar) {
+        $deps = $depend->allDepends($collection, function () use ($progressBar) {
             $progressBar->advance();
         });
         $progressBar->finish();

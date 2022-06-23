@@ -2,8 +2,6 @@
 
 namespace ZnTool\Dev\Runtime\Domain\Helpers;
 
-use Faker\Provider\File;
-use ZnCore\Base\Legacy\Yii\Helpers\FileHelper;
 use ZnCore\Base\Libs\FileSystem\Helpers\FileStorageHelper;
 
 class UsedHelper
@@ -11,14 +9,14 @@ class UsedHelper
 
     public static function register()
     {
-        register_shutdown_function(function (){
-            $file = __DIR__ . '/../../../../../../../common/runtime/logs/usedClasses/'.time().'.json';
+        register_shutdown_function(function () {
+            $file = __DIR__ . '/../../../../../../../common/runtime/logs/usedClasses/' . time() . '.json';
             $classes = get_declared_classes();
 
             $all = [];
             foreach ($classes as $class) {
                 $reflection = new ReflectionClass($class);
-                if($reflection->isUserDefined()) {
+                if ($reflection->isUserDefined()) {
                     $all['user'][] = $class;
                 } else {
                     $all['system'][] = $class;
