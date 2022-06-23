@@ -3,7 +3,7 @@
 
 use Illuminate\Container\Container;
 use Symfony\Component\Console\Application;
-use ZnCore\Base\Libs\Container\Helpers\ContainerHelper;
+use ZnCore\Base\Container\Helpers\ContainerHelper;
 use ZnLib\Console\Symfony4\Helpers\CommandHelper;
 
 /**

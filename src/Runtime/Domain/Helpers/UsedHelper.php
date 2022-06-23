@@ -2,7 +2,7 @@
 
 namespace ZnTool\Dev\Runtime\Domain\Helpers;
 
-use ZnCore\Base\Libs\FileSystem\Helpers\FileStorageHelper;
+use ZnCore\Base\FileSystem\Helpers\FileStorageHelper;
 
 class UsedHelper
 {

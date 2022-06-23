@@ -6,7 +6,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Enumerable;
 use ZnCore\Domain\Service\Base\BaseCrudService;
 use ZnCore\Domain\Query\Entities\Query;
-use ZnCore\Base\Libs\Store\StoreFile;
+use ZnCore\Base\Store\StoreFile;
 use ZnTool\Package\Domain\Entities\ConfigEntity;
 use ZnTool\Package\Domain\Entities\PackageEntity;
 use ZnTool\Dev\Composer\Domain\Interfaces\Repositories\ConfigRepositoryInterface;

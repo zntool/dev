@@ -3,9 +3,9 @@
 namespace ZnTool\Dev\Runtime\Domain\Helpers;
 
 use ZnCore\Contract\Common\Exceptions\InternalServerErrorException;
-use ZnCore\Base\Libs\Arr\Helpers\ArrayHelper;
-use ZnCore\Base\Libs\Develop\Helpers\DeprecateHelper;
-use ZnCore\Base\Libs\Text\Libs\RandomString;
+use ZnCore\Base\Arr\Helpers\ArrayHelper;
+use ZnCore\Base\Develop\Helpers\DeprecateHelper;
+use ZnCore\Base\Text\Libs\RandomString;
 
 DeprecateHelper::hardThrow();
 
@@ -13,7 +13,7 @@ DeprecateHelper::hardThrow();
  * Class Benchmark
  * @package ZnTool\Dev\Runtime\Domain\Helpers
  * @deprecated
- * @see \ZnCore\Base\Libs\Develop\Libs\Benchmark
+ * @see \ZnCore\Base\Develop\Libs\Benchmark
  */
 class Benchmark
 {
