@@ -12,7 +12,7 @@ use Symfony\Component\VarDumper\Dumper\HtmlDumper;
 use Symfony\Component\VarDumper\Dumper\ServerDumper;
 use Symfony\Component\VarDumper\VarDumper;
 use ZnCore\Contract\Common\Exceptions\InvalidConfigException;
-use ZnCore\Base\App\Helpers\EnvHelper;
+use ZnCore\Base\Env\Helpers\EnvHelper;
 use ZnTool\Dev\VarDumper\Dumper\TelegramDumper;
 
 class SymfonyDumperFacade
