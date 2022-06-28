@@ -4,14 +4,13 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Yamshikov Vitaliy",
-      "email": "theyamshikov@yandex.ru"
+      "name": "Zn Developer",
+      "email": "zndev@ya.ru"
     }
   ],
   "minimum-stability": "dev",
   "require": {
     "symfony/var-dumper": "^4.4|^5.0|^6.0",
-    "symfony/yaml": "^4.4|^5.0|^6.0",
     "guzzlehttp/guzzle": ">5.3",
     "zendframework/zend-code": "^3.3.0"
   },
