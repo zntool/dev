@@ -35,7 +35,7 @@ class ComposerConfigCommand extends Command
         $output->writeln('<fg=white># Composer dependency version</>');
         $output->writeln('');
         /** @var ConfigEntity[] | Collection $collection */
-        $collection = $this->configService->all();
+        $collection = $this->configService->findAll();
         /** @var ConfigEntity[] | Collection $collection */
         $thirdPartyCollection = $this->configService->allWithThirdParty();
         $namespacesPackages = ComposerConfigHelper::extractPsr4AutoloadPackages($thirdPartyCollection);

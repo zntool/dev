@@ -24,10 +24,10 @@ class ConfigService extends BaseCrudService implements ConfigServiceInterface
         $this->packageRepository = $packageRepository;
     }
 
-    public function all(Query $query = null): Enumerable
+    public function findAll(Query $query = null): Enumerable
     {
         /** @var Collection | PackageEntity[] $packageCollection */
-        $packageCollection = $this->packageRepository->all();
+        $packageCollection = $this->packageRepository->findAll();
         $configCollection = new Collection;
         foreach ($packageCollection as $packageEntity) {
             $composerConfigFile = $packageEntity->getDirectory() . '/composer.json';
