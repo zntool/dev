@@ -26,7 +26,7 @@ class ConfigService extends BaseCrudService implements ConfigServiceInterface
 
     public function findAll(Query $query = null): Enumerable
     {
-        /** @var Collection | PackageEntity[] $packageCollection */
+        /** @var \ZnCore\Domain\Collection\Interfaces\Enumerable | PackageEntity[] $packageCollection */
         $packageCollection = $this->packageRepository->findAll();
         $configCollection = new Collection;
         foreach ($packageCollection as $packageEntity) {
@@ -45,7 +45,7 @@ class ConfigService extends BaseCrudService implements ConfigServiceInterface
 
     public function allWithThirdParty(Query $query = null)
     {
-        /** @var Collection | PackageEntity[] $packageCollection */
+        /** @var \ZnCore\Domain\Collection\Interfaces\Enumerable | PackageEntity[] $packageCollection */
         $packageCollection = $this->packageRepository->allWithThirdParty();
         //dd($packageCollection);
         $configCollection = new Collection;
