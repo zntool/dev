@@ -2,13 +2,13 @@
 
 namespace ZnTool\Dev\Composer\Commands;
 
-use ZnCore\Domain\Collection\Libs\Collection;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Yaml\Yaml;
 use yii\helpers\ArrayHelper;
+use ZnCore\Domain\Collection\Interfaces\Enumerable;
 use ZnTool\Dev\Composer\Domain\Interfaces\Services\ConfigServiceInterface;
 use ZnTool\Package\Domain\Entities\ConfigEntity;
 use ZnTool\Package\Domain\Helpers\ComposerConfigHelper;
@@ -34,9 +34,9 @@ class ComposerConfigCommand extends Command
     {
         $output->writeln('<fg=white># Composer dependency version</>');
         $output->writeln('');
-        /** @var ConfigEntity[] | Collection $collection */
+        /** @var ConfigEntity[] | Enumerable $collection */
         $collection = $this->configService->findAll();
-        /** @var ConfigEntity[] | Collection $collection */
+        /** @var ConfigEntity[] | Enumerable $collection */
         $thirdPartyCollection = $this->configService->allWithThirdParty();
         $namespacesPackages = ComposerConfigHelper::extractPsr4AutoloadPackages($thirdPartyCollection);
 
