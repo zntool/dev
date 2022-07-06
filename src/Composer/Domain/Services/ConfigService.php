@@ -28,7 +28,7 @@ class ConfigService extends BaseCrudService implements ConfigServiceInterface
     {
         /** @var \ZnCore\Domain\Collection\Interfaces\Enumerable | PackageEntity[] $packageCollection */
         $packageCollection = $this->packageRepository->findAll();
-        $configCollection = new Collection;
+        $configCollection = new Collection();
         foreach ($packageCollection as $packageEntity) {
             $composerConfigFile = $packageEntity->getDirectory() . '/composer.json';
             $composerConfigStore = new StoreFile($composerConfigFile);
@@ -48,7 +48,7 @@ class ConfigService extends BaseCrudService implements ConfigServiceInterface
         /** @var \ZnCore\Domain\Collection\Interfaces\Enumerable | PackageEntity[] $packageCollection */
         $packageCollection = $this->packageRepository->allWithThirdParty();
         //dd($packageCollection);
-        $configCollection = new Collection;
+        $configCollection = new Collection();
         foreach ($packageCollection as $packageEntity) {
             $composerConfigFile = $packageEntity->getDirectory() . '/composer.json';
             $composerConfigStore = new StoreFile($composerConfigFile);
