@@ -4,8 +4,8 @@ namespace ZnTool\Dev\Composer\Domain\Services;
 
 use ZnCore\Collection\Interfaces\Enumerable;
 use ZnCore\Collection\Libs\Collection;
-use ZnCore\Domain\Query\Entities\Query;
-use ZnCore\Domain\Service\Base\BaseCrudService;
+use ZnCore\Query\Entities\Query;
+use ZnCore\Service\Base\BaseCrudService;
 use ZnLib\Components\Store\StoreFile;
 use ZnTool\Dev\Composer\Domain\Interfaces\Repositories\ConfigRepositoryInterface;
 use ZnTool\Dev\Composer\Domain\Interfaces\Services\ConfigServiceInterface;
