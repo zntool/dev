@@ -8,7 +8,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Yaml\Yaml;
 use yii\helpers\ArrayHelper;
-use ZnCore\Domain\Collection\Interfaces\Enumerable;
+use ZnCore\Collection\Interfaces\Enumerable;
 use ZnTool\Dev\Composer\Domain\Interfaces\Services\ConfigServiceInterface;
 use ZnTool\Package\Domain\Entities\ConfigEntity;
 use ZnTool\Package\Domain\Helpers\ComposerConfigHelper;

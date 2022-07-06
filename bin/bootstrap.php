@@ -1,9 +1,9 @@
 <?php
 
 
-use ZnCore\Base\Container\Libs\Container;
+use ZnCore\Container\Libs\Container;
 use Symfony\Component\Console\Application;
-use ZnCore\Base\Container\Helpers\ContainerHelper;
+use ZnCore\Container\Helpers\ContainerHelper;
 use ZnLib\Console\Symfony4\Helpers\CommandHelper;
 
 /**

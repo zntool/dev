@@ -2,8 +2,8 @@
 
 namespace ZnTool\Dev\Composer\Domain\Services;
 
-use ZnCore\Domain\Collection\Interfaces\Enumerable;
-use ZnCore\Domain\Collection\Libs\Collection;
+use ZnCore\Collection\Interfaces\Enumerable;
+use ZnCore\Collection\Libs\Collection;
 use ZnCore\Domain\Query\Entities\Query;
 use ZnCore\Domain\Service\Base\BaseCrudService;
 use ZnLib\Components\Store\StoreFile;
@@ -26,7 +26,7 @@ class ConfigService extends BaseCrudService implements ConfigServiceInterface
 
     public function findAll(Query $query = null): Enumerable
     {
-        /** @var \ZnCore\Domain\Collection\Interfaces\Enumerable | PackageEntity[] $packageCollection */
+        /** @var \ZnCore\Collection\Interfaces\Enumerable | PackageEntity[] $packageCollection */
         $packageCollection = $this->packageRepository->findAll();
         $configCollection = new Collection();
         foreach ($packageCollection as $packageEntity) {
@@ -45,7 +45,7 @@ class ConfigService extends BaseCrudService implements ConfigServiceInterface
 
     public function allWithThirdParty(Query $query = null)
     {
-        /** @var \ZnCore\Domain\Collection\Interfaces\Enumerable | PackageEntity[] $packageCollection */
+        /** @var \ZnCore\Collection\Interfaces\Enumerable | PackageEntity[] $packageCollection */
         $packageCollection = $this->packageRepository->allWithThirdParty();
         //dd($packageCollection);
         $configCollection = new Collection();

@@ -4,8 +4,8 @@ namespace ZnTool\Dev\VarDumper\Subscribers;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Contracts\EventDispatcher\Event;
-use ZnCore\Base\Container\Traits\ContainerAwareTrait;
-use ZnCore\Base\App\Enums\AppEventEnum;
+use ZnCore\Container\Traits\ContainerAwareTrait;
+use ZnCore\App\Enums\AppEventEnum;
 use ZnTool\Dev\VarDumper\Facades\SymfonyDumperFacade;
 
 /**
