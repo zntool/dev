@@ -1,6 +1,7 @@
 <?php
 
 
+use ZnCore\Container\Interfaces\ContainerConfiguratorInterface;
 use ZnCore\Container\Libs\Container;
 use Symfony\Component\Console\Application;
 use ZnCore\Container\Helpers\ContainerHelper;
@@ -19,7 +20,9 @@ use ZnLib\Console\Symfony4\Helpers\CommandHelper;
 
 // --- Generator ---
 
-$containerConfigurator = ContainerHelper::getContainerConfiguratorByContainer($container);
+/** @var ContainerConfiguratorInterface $containerConfigurator */
+$containerConfigurator = $container->get(ContainerConfiguratorInterface::class);
+//$containerConfigurator = ContainerHelper::getContainerConfiguratorByContainer($container);
 
 $containerConfigurator->bind(\ZnTool\Generator\Domain\Interfaces\Services\DomainServiceInterface::class, \ZnTool\Generator\Domain\Services\DomainService::class);
 $containerConfigurator->bind(\ZnTool\Generator\Domain\Interfaces\Services\ModuleServiceInterface::class, \ZnTool\Generator\Domain\Services\ModuleService::class);
